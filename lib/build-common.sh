@@ -534,8 +534,8 @@ echo "SDK: $SDK"
 echo "Platform: android-$TARGET_SDK"
 echo "Build Tools: $BUILD_TOOLS"
 echo "NDK: $NDK"
-if command -v rustup >/dev/null 2>&1 && ! rustup target list --installed | grep -qx 'aarch64-linux-android'; then
-    fail "Rust target is missing. Install it once with: rustup target add aarch64-linux-android"
+if command -v rustup >/dev/null 2>&1 && ! rustup target list --installed | grep -qx 'armv7-linux-androideabi'; then
+    fail "Rust target is missing. Install it once with: rustup target add armv7-linux-androideabi"
 fi
 
 # Compilation profile optimizations: fast builds, low memory consumption on 2-vCPU / 4GB RAM machines,
@@ -550,7 +550,7 @@ export CARGO_PROFILE_RELEASE_DEBUG="${CARGO_PROFILE_RELEASE_DEBUG:-false}"
 export GIT_LFS_SKIP_SMUDGE=1
 git config --global core.quotePath false 2>/dev/null || true
 # Ensure bindgen and clang use versioned target triples on NDK 27+ / 30+.
-export BINDGEN_EXTRA_CLANG_ARGS="--target=aarch64-linux-android28 ${BINDGEN_EXTRA_CLANG_ARGS:-}"
+export BINDGEN_EXTRA_CLANG_ARGS="--target=armv7a-linux-androideabi28 ${BINDGEN_EXTRA_CLANG_ARGS:-}"
 
 # Repositories whose releases either lack tags, have irregular non-version tags (e.g. earthcraft 'versions'),
 # or whose Android integrations require upstream main:
@@ -5148,7 +5148,7 @@ android_logger = "0.15"
 [package.metadata.android]
 package = "{package_name}"
 apk_name = "{apk_basename}"
-build_targets = ["aarch64-linux-android"]
+build_targets = ["armv7-linux-androideabi"]
 resources = "res"
 {java_sources}
 [package.metadata.android.sdk]
@@ -7741,7 +7741,7 @@ if [[ "$MODE" == "release" ]]; then
     fi
 fi
 
-echo "  -> building the native library with cargo-ndk (arm64-v8a, API $MIN_SDK)"
+echo "  -> building the native library with cargo-ndk (armeabi-v7a, API $MIN_SDK)"
 rm -rf "$ANDROID_DIR/jniLibs"
 
 # For SolidCraft, cargo-ndk must run from the workspace root
@@ -7751,14 +7751,14 @@ if [[ "$APP" == "solidcraft" ]]; then
     NDK_PACKAGE="solidcraft-android"
     NDK_MANIFEST="$ROOT/$SRC/Cargo.toml"
     if [[ "$MODE" == "release" ]]; then
-        if cargo ndk -t arm64-v8a -P "$MIN_SDK" -o "$ANDROID_DIR/jniLibs" --manifest-path "$NDK_MANIFEST" build --release -p "$NDK_PACKAGE" 2>&1 | tee "$ROOT/$LOG"; then
+        if cargo ndk -t armeabi-v7a -P "$MIN_SDK" -o "$ANDROID_DIR/jniLibs" --manifest-path "$NDK_MANIFEST" build --release -p "$NDK_PACKAGE" 2>&1 | tee "$ROOT/$LOG"; then
             :
         else
             status=$?
             fail "Release native build failed (exit $status). Log: $ROOT/$LOG"
         fi
     else
-        if cargo ndk -t arm64-v8a -P "$MIN_SDK" -o "$ANDROID_DIR/jniLibs" --manifest-path "$NDK_MANIFEST" build -p "$NDK_PACKAGE" 2>&1 | tee "$ROOT/$LOG"; then
+        if cargo ndk -t armeabi-v7a -P "$MIN_SDK" -o "$ANDROID_DIR/jniLibs" --manifest-path "$NDK_MANIFEST" build -p "$NDK_PACKAGE" 2>&1 | tee "$ROOT/$LOG"; then
             :
         else
             status=$?
@@ -7768,14 +7768,14 @@ if [[ "$APP" == "solidcraft" ]]; then
 else
     # Standard build from android app directory for other apps
     if [[ "$MODE" == "release" ]]; then
-        if cargo ndk -t arm64-v8a -P "$MIN_SDK" -o "$ANDROID_DIR/jniLibs" build --release 2>&1 | tee "$ROOT/$LOG"; then
+        if cargo ndk -t armeabi-v7a -P "$MIN_SDK" -o "$ANDROID_DIR/jniLibs" build --release 2>&1 | tee "$ROOT/$LOG"; then
             :
         else
             status=$?
             fail "Release native build failed (exit $status). Log: $ROOT/$LOG"
         fi
     else
-        if cargo ndk -t arm64-v8a -P "$MIN_SDK" -o "$ANDROID_DIR/jniLibs" build 2>&1 | tee "$ROOT/$LOG"; then
+        if cargo ndk -t armeabi-v7a -P "$MIN_SDK" -o "$ANDROID_DIR/jniLibs" build 2>&1 | tee "$ROOT/$LOG"; then
             :
         else
             status=$?
@@ -7793,10 +7793,10 @@ fi
 NEEDS_LIBCXX="$(find "$ANDROID_DIR/jniLibs" -name "*.so" -exec readelf -d {} + 2>/dev/null | grep 'Shared library: \[libc++_shared\.so\]' || true)"
 if [[ -n "$NEEDS_LIBCXX" ]]; then
     echo "  -> bundling libc++_shared.so from NDK..."
-    LIBCXX="$NDK/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/aarch64-linux-android/libc++_shared.so"
+    LIBCXX="$NDK/toolchains/llvm/prebuilt/linux-x86_64/sysroot/usr/lib/arm-linux-androideabi/libc++_shared.so"
     if [[ -f "$LIBCXX" ]]; then
-        mkdir -p "$ANDROID_DIR/jniLibs/arm64-v8a"
-        cp -f "$LIBCXX" "$ANDROID_DIR/jniLibs/arm64-v8a/libc++_shared.so"
+        mkdir -p "$ANDROID_DIR/jniLibs/armeabi-v7a"
+        cp -f "$LIBCXX" "$ANDROID_DIR/jniLibs/armeabi-v7a/libc++_shared.so"
     else
         echo "  -> WARNING: the NDK has no libc++_shared.so; the app will not start" >&2
     fi

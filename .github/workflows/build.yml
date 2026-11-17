@@ -257,7 +257,7 @@ jobs:
       - name: Set up Rust
         uses: dtolnay/rust-toolchain@stable
         with:
-          targets: aarch64-linux-android
+          targets: armv7-linux-androideabi
 
       - name: Cache Cargo registry & Git dependencies
         uses: actions/cache@v4
@@ -294,7 +294,7 @@ jobs:
               echo "NDK_HOME=$LATEST_NDK" >> $GITHUB_ENV
             fi
           fi
-          echo "BINDGEN_EXTRA_CLANG_ARGS=--target=aarch64-linux-android28" >> $GITHUB_ENV
+          echo "BINDGEN_EXTRA_CLANG_ARGS=--target=armv7a-linux-androideabi28" >> $GITHUB_ENV
           echo "ARTCRAFT_BUILD_TOOLS_VERSION=35.0.0" >> $GITHUB_ENV
 
       - name: Build ${{ matrix.app }} APK
@@ -386,7 +386,7 @@ jobs:
       - name: Install Rust toolchain
         uses: dtolnay/rust-toolchain@stable
         with:
-          targets: aarch64-linux-android
+          targets: armv7-linux-androideabi
 
       - name: Install cargo-ndk
         run: cargo install cargo-ndk
@@ -431,7 +431,7 @@ jobs:
             echo "ANDROID_NDK_HOME=$LATEST_NDK" >> $GITHUB_ENV
           fi
           echo "ANDROID_HOME=$SDK_ROOT" >> $GITHUB_ENV
-          echo "BINDGEN_EXTRA_CLANG_ARGS=--target=aarch64-linux-android28" >> $GITHUB_ENV
+          echo "BINDGEN_EXTRA_CLANG_ARGS=--target=armv7a-linux-androideabi28" >> $GITHUB_ENV
           echo "ARTCRAFT_BUILD_TOOLS_VERSION=35.0.0" >> $GITHUB_ENV
 
       - name: Build Android Launcher
@@ -451,7 +451,7 @@ jobs:
           else
             APK_VERSION="${VERSION}"
           fi
-          BUILT_APK="./launcher/target/android/artcraft-launcher-${APK_VERSION}-arm64-v8a.apk"
+          BUILT_APK="./launcher/target/android/artcraft-launcher-${APK_VERSION}-armeabi-v7a.apk"
           mkdir -p ./output
           cp "$BUILT_APK" ./output/Artcraft-launcher.apk
           echo "APK_VERSION=${APK_VERSION}" >> $GITHUB_ENV

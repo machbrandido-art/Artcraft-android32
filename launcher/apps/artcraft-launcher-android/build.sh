@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
-# Build ArtCraft Launcher's Android APK (arm64-v8a): the Rust library with cargo-ndk, then the APK
+# Build ArtCraft Launcher's Android APK (armeabi-v7a): the Rust library with cargo-ndk, then the APK
 # with Gradle. Needs ANDROID_HOME (SDK with platform 35 and build-tools), ANDROID_NDK_HOME (r27+),
-# JDK 17, `rustup target add aarch64-linux-android` and `cargo install cargo-ndk`.
+# JDK 17, `rustup target add armv7-linux-androideabi` and `cargo install cargo-ndk`.
 #
 #   apps/artcraft-launcher-android/build.sh            # release APK
 #   PROFILE=dev apps/artcraft-launcher-android/build.sh  # unoptimised library, faster to build
 #   RELEASE_BUILD=3 apps/artcraft-launcher-android/build.sh  # the 3rd Android release of this version
 #
-# The APK lands in target/android/artcraft-launcher-<version>[-<build>]-arm64-v8a.apk. A release of it
+# The APK lands in target/android/artcraft-launcher-<version>[-<build>]-armeabi-v7a.apk. A release of it
 # is tagged android-v<version>[-<build>] with the APK attached: installed copies offer to update
 # to it (android/app/src/main/java/.../Updater.java).
 
@@ -44,7 +44,7 @@ else
     TAG="android-v${VERSION}"
 fi
 
-echo "Building ArtCraft Launcher ${APK_VERSION} (${PROFILE}) for arm64-v8a"
+echo "Building ArtCraft Launcher ${APK_VERSION} (${PROFILE}) for armeabi-v7a"
 
 # ---- 1. Build the Rust library with cargo-ndk -------------------------------
 
@@ -57,20 +57,20 @@ if [[ -f "$HERE/app-catalog.json" ]]; then
 fi
 
 # Build for Android arm64
-cargo ndk -t arm64-v8a -o "$HERE/android/app/src/main/jniLibs" \
+cargo ndk -t armeabi-v7a -o "$HERE/android/app/src/main/jniLibs" \
     --platform "$API" --manifest-path "$HERE/Cargo.toml" build ${FEATURE_ARGS[@]} ${PROFILE_ARGS[@]}
 
-# The cdylib ends up in jniLibs/arm64-v8a/libartcraft_launcher_android.so
+# The cdylib ends up in jniLibs/armeabi-v7a/libartcraft_launcher_android.so
 # Verify it exists
-if [[ ! -f "$HERE/android/app/src/main/jniLibs/arm64-v8a/libartcraft_launcher_android.so" ]]; then
-    echo "error: Rust library not found at jniLibs/arm64-v8a/libartcraft_launcher_android.so" >&2
+if [[ ! -f "$HERE/android/app/src/main/jniLibs/armeabi-v7a/libartcraft_launcher_android.so" ]]; then
+    echo "error: Rust library not found at jniLibs/armeabi-v7a/libartcraft_launcher_android.so" >&2
     exit 1
 fi
 
 # Strip debug symbols for release builds (smaller APK)
 if [[ "$PROFILE" == "release" ]]; then
     "$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-strip" \
-        "$HERE/android/app/src/main/jniLibs/arm64-v8a/libartcraft_launcher_android.so" \
+        "$HERE/android/app/src/main/jniLibs/armeabi-v7a/libartcraft_launcher_android.so" \
         || true
 fi
 
@@ -90,7 +90,7 @@ OUT_DIR="$ROOT/target/android"
 mkdir -p "$OUT_DIR"
 
 APK_SOURCE="$HERE/android/app/build/outputs/apk/release/app-release.apk"
-APK_DEST="$OUT_DIR/artcraft-launcher-${APK_VERSION}-arm64-v8a.apk"
+APK_DEST="$OUT_DIR/artcraft-launcher-${APK_VERSION}-armeabi-v7a.apk"
 
 cp "$APK_SOURCE" "$APK_DEST"
 echo "APK ready: $APK_DEST"
