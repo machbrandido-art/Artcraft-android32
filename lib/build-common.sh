@@ -691,6 +691,23 @@ else
     mv "$SRC_TMP" "$SRC"
 fi
 
+# ── WordCraft UI patch: mobile layout, backstage, ribbon, options, panes ─────────
+# Ships from patches/wordcraft-ui.patch, generated against storytold/wordcraft @ 22a73d9.
+# Applied BEFORE the guarded upstream fixups and the toolchain/arboard/midir steps
+# below, so those fixups still see the base tree where this patch leaves a line
+# untouched. Idempotent: on a reused source tree the reverse-check short-circuits,
+# so the second build in the same checkout does not fail with "already applied".
+if [[ "$APP" == "wordcraft" && -f "$ROOT/patches/wordcraft-ui.patch" ]]; then
+    if git -C "$SRC" apply --reverse --check "$ROOT/patches/wordcraft-ui.patch" 2>/dev/null; then
+        echo "  -> WordCraft UI patch already applied; skipping."
+    else
+        echo "  -> Applying WordCraft UI patch (mobile layout, backstage, ribbon)..."
+        git -C "$SRC" apply --verbose "$ROOT/patches/wordcraft-ui.patch" \
+            || fail "Applying patches/wordcraft-ui.patch failed. $REPO likely moved past $(git -C "$SRC" rev-parse --short HEAD 2>/dev/null || echo '?'). Regenerate the patch against current source and push."
+    fi
+fi
+# ─────────────────────────────────────────────────────────────────────────────────
+
 # Export upstream release commit SHA and build date for the app being built.
 # Upstream ArtCraft apps use <APP>_BUILD_SHA and <APP>_BUILD_DATE in their About dialog and CLI
 # (e.g. WORDCRAFT_BUILD_SHA, PHOTOCRAFT_BUILD_SHA, FILMCRAFT_BUILD_SHA). When absent, they fall back

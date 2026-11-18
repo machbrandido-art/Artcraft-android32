@@ -76,3 +76,4 @@ launcher/**/.gradle/
 launcher/**/.cxx/
 launcher/**/local.properties
 launcher/**/jniLibs/
+*.bak
