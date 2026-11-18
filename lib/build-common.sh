@@ -844,6 +844,38 @@ elif app == "wordcraft":
     ):
         fixed.append("crates/ui-egui/src/theme.rs (mobile touch sizes)")
 
+    # Mobile UI: bigger icons, buttons, spacing in chrome.rs (menu bar, toolbars, status bar)
+    for old, new in [
+        ("vec2(26.0, 24.0)", "vec2(44.0, 44.0)"),
+        ("vec2(16.0, 16.0)", "vec2(22.0, 22.0)"),
+        ("vec2(14.0, 14.0)", "vec2(20.0, 20.0)"),
+        ("vec2(12.0, 24.0)", "vec2(20.0, 40.0)"),
+        ("vec2(9.0, 9.0)",   "vec2(14.0, 14.0)"),
+        ("vec2(13.0, 13.0)", "vec2(18.0, 18.0)"),
+        ("vec2(30.0, 16.0)", "vec2(44.0, 28.0)"),
+        ("vec2(40.0, 20.0)", "vec2(56.0, 32.0)"),
+        ("vec2(84.0, 22.0)", "vec2(140.0, 32.0)"),
+        ("vec2(260.0, 22.0)","vec2(340.0, 32.0)"),
+        ("vec2(22.0, 20.0)", "vec2(36.0, 32.0)"),
+        ("vec2(18.0, 18.0)", "vec2(28.0, 28.0)"),
+        ("vec2(6.0, 0.0)",   "vec2(12.0, 0.0)"),
+        ("vec2(4.0, 0.0)",   "vec2(10.0, 0.0)"),
+        ("vec2(14.0, 0.0)",  "vec2(20.0, 0.0)"),
+        ("vec2(2.0, 0.0)",   "vec2(8.0, 0.0)"),
+    ]:
+        if fix_all("crates/ui-egui/src/chrome.rs", old, new):
+            fixed.append(f"crates/ui-egui/src/chrome.rs ({old} -> {new})")
+
+    # Mobile UI: bigger icons, spacing in ribbon.rs (top toolbar)
+    for old, new in [
+        ("vec2(2.0, 0.0)",  "vec2(8.0, 0.0)"),
+        ("vec2(2.0, 2.0)",  "vec2(8.0, 8.0)"),
+        ("vec2(14.0, 14.0)","vec2(22.0, 22.0)"),
+        ("vec2(0.0, 4.0)",  "vec2(0.0, 8.0)"),
+    ]:
+        if fix_all("crates/ui-egui/src/ribbon.rs", old, new):
+            fixed.append(f"crates/ui-egui/src/ribbon.rs ({old} -> {new})")
+
 elif app == "lightcraft":
     # Interactive slider / curve performance on Android:
     # 1. Whole-frame drafts on high-DPI Android screens rendered at full 2560px canvas resolution,
@@ -2506,7 +2538,7 @@ bash "$ROOT/lib/subcraft.sh" "$SRC" "$APP" "$TITLE"
 bash "$ROOT/lib/topbar_modifiers.sh" "$SRC" "$APP" "$TITLE" "$NO_BUTTONS"
 
 # Unofficial Android port disclaimer in About dialogs.
-bash "$ROOT/lib/about_dialog.sh" "$SRC" "$APP" "$TITLE"
+# bash "$ROOT/lib/about_dialog.sh" "$SRC" "$APP" "$TITLE"
 
 say 4 "Preparing the NativeActivity launcher..."
 if [[ -x "adapters/$APP/prepare.sh" ]]; then
@@ -5175,6 +5207,7 @@ android_logger = "0.15"
 package = "{package_name}"
 apk_name = "{apk_basename}"
 build_targets = ["armv7-linux-androideabi"]
+orientation = "portrait"
 resources = "res"
 {java_sources}
 [package.metadata.android.sdk]
