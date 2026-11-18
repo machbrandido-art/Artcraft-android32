@@ -178,6 +178,10 @@ SRC="source/$APP"
 REPO="https://github.com/storytold/$APP.git"
 # SubCraft, SolidCraft and the newly added apps are community apps that live at different origins.
 APP_ORIGIN="https://github.com/storytold/$APP"
+if [[ "$APP" == "wordcraft" ]]; then
+    REPO="https://github.com/machbrandido-art/wordcraft.git"
+    APP_ORIGIN="https://github.com/machbrandido-art/wordcraft"
+fi
 if [[ "$APP" == "subcraft" ]]; then
     REPO="https://github.com/Aalzard/subcraft.git"
     APP_ORIGIN="https://github.com/Aalzard/subcraft"
