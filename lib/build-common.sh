@@ -818,6 +818,32 @@ elif app == "wordcraft":
     ):
         fixed.append("crates/fonts/src/fontdb/names.rs (system and user font directories)")
 
+    # Mobile-friendly touch sizes: 44pt targets (iOS HIG), larger text, wider scrollbars.
+    # Overrides the desktop-sized defaults set in `pub fn apply(...)` (theme.rs).
+    if fix(
+        "crates/ui-egui/src/theme.rs",
+        '        s.spacing.item_spacing = egui::vec2(6.0, 4.0);\n'
+        '        s.spacing.button_padding = egui::vec2(8.0, 3.0);\n'
+        '        s.spacing.interact_size = egui::vec2(24.0, 22.0);\n'
+        '        s.spacing.menu_margin = egui::Margin::same(6);\n'
+        '        s.text_styles.insert(egui::TextStyle::Body, regular(12.5));\n'
+        '        s.text_styles.insert(egui::TextStyle::Button, regular(12.5));\n'
+        '        s.text_styles.insert(egui::TextStyle::Small, regular(10.5));\n'
+        '        s.text_styles.insert(egui::TextStyle::Heading, semibold(17.0));\n'
+        '        s.interaction.tooltip_delay = 0.45;\n',
+        '        s.spacing.item_spacing = egui::vec2(10.0, 8.0);\n'
+        '        s.spacing.button_padding = egui::vec2(12.0, 10.0);\n'
+        '        s.spacing.interact_size = egui::vec2(44.0, 44.0);\n'
+        '        s.spacing.menu_margin = egui::Margin::same(8);\n'
+        '        s.spacing.scroll.bar_width = 14.0;\n'
+        '        s.text_styles.insert(egui::TextStyle::Body, regular(17.0));\n'
+        '        s.text_styles.insert(egui::TextStyle::Button, regular(16.0));\n'
+        '        s.text_styles.insert(egui::TextStyle::Small, regular(14.0));\n'
+        '        s.text_styles.insert(egui::TextStyle::Heading, semibold(22.0));\n'
+        '        s.interaction.tooltip_delay = 0.45;\n',
+    ):
+        fixed.append("crates/ui-egui/src/theme.rs (mobile touch sizes)")
+
 elif app == "lightcraft":
     # Interactive slider / curve performance on Android:
     # 1. Whole-frame drafts on high-DPI Android screens rendered at full 2560px canvas resolution,

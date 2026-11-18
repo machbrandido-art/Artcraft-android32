@@ -1,0 +1,1357 @@
+Build picassosuite	Build picassosuite APK	﻿2026-11-17T23:34:38.0034837Z ##[group]Run mkdir -p logs output
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0035140Z ^[[36;1mmkdir -p logs output^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0035379Z ^[[36;1mrm -f output/*.apk output/*.tmp^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0035634Z ^[[36;1mset -o pipefail^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0035880Z ^[[36;1mBUILD_LOG="logs/picassosuite-build.log"^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0036171Z ^[[36;1mif [ "$BUILD_MODE" = "debug" ]; then^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0036499Z ^[[36;1m  bash build-debug.sh -picassosuite 2>&1 | tee "$BUILD_LOG"^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0036804Z ^[[36;1melse^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0037053Z ^[[36;1m  bash build.sh -picassosuite 2>&1 | tee "$BUILD_LOG"^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0037506Z ^[[36;1mfi^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0037713Z ^[[36;1msccache --show-stats || true^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0084099Z shell: /usr/bin/bash -e {0}
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0084357Z env:
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0084553Z   RUSTC_WRAPPER: sccache
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0084786Z   SCCACHE_DIR: /home/runner/.cache/sccache
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0085036Z   SCCACHE_CACHE_SIZE: 2G
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0085290Z   SCCACHE_IDLE_TIMEOUT: 0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0085520Z   GIT_LFS_SKIP_SMUDGE: 1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0085782Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.16/x64
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0086152Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib/pkgconfig
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0086502Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0086829Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0087146Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.16/x64
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0087471Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.16/x64/lib
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0087802Z   SCCACHE_PATH: /opt/hostedtoolcache/sccache/0.9.0/x64/sccache
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0088098Z   ACTIONS_CACHE_SERVICE_V2: on
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0088443Z   ACTIONS_RESULTS_URL: https://results-receiver.actions.githubusercontent.com/
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0128641Z   ACTIONS_RUNTIME_TOKEN: ***
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0129017Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0129458Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.13-9/x64
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0129936Z   CARGO_HOME: /home/runner/.cargo
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0130172Z   CARGO_INCREMENTAL: 0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0130375Z   CARGO_TERM_COLOR: always
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0130656Z   ANDROID_NDK_HOME: /usr/local/lib/android/sdk/ndk/27.3.13750724
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0130986Z   NDK_HOME: /usr/local/lib/android/sdk/ndk/27.3.13750724
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0131321Z   BINDGEN_EXTRA_CLANG_ARGS: --target=armv7a-linux-androideabi28
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0131660Z   ARTCRAFT_BUILD_TOOLS_VERSION: 35.0.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0131898Z   BUILD_MODE: release
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0132106Z   BUILD_SOURCE: stable
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0132326Z   CARGO_PROFILE_RELEASE_CODEGEN_UNITS: 16
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0132585Z   CARGO_PROFILE_RELEASE_LTO: off
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0132815Z   CARGO_PROFILE_RELEASE_DEBUG: false
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0133051Z ##[endgroup]
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0367642Z 
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0368271Z [1] Checking build tools...
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0900388Z 
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.0901400Z [2] Finding Android SDK and NDK (the builder's own SDK lives in /home/runner/work/Artcraft-android32/Artcraft-android32/android-sdk)...
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.2501117Z SDK: /usr/local/lib/android/sdk
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.2501572Z Platform: android-35
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.2501793Z Build Tools: 35.0.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.2502049Z NDK: /usr/local/lib/android/sdk/ndk/27.3.13750724
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.3204872Z 
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.3205579Z [3] Fetching official source for PicassoSuite...
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.3244421Z Looking up latest stable release tag for PicassoSuite (https://github.com/fabox-os/Picasso-Suite.git)...
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.5609853Z   -> Found latest stable release tag: v0.8.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:38.5627950Z Cloning into '/home/runner/work/Artcraft-android32/Artcraft-android32/source/.clone-picassosuite.2571'...
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:39.5689524Z warning: refs/tags/v0.8.0 c002a934ec5fea689f84a8129de88855434255b0 is not a commit!
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:39.5692849Z Note: switching to '801ef77e3c00c4bb6bed7706df2f3efd654bdda6'.
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:39.5693195Z 
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:39.5693446Z You are in 'detached HEAD' state. You can look around, make experimental
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:39.5694071Z changes and commit them, and you can discard any commits you make in this
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:39.5694692Z state without impacting any branches by switching back to a branch.
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:39.5695055Z 
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:39.5695302Z If you want to create a new branch to retain commits you create, you may
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:39.5696122Z do so (now or later) by using -c with the switch command. Example:
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:39.5696438Z 
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:39.5696594Z   git switch -c <new-branch-name>
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:39.5696843Z 
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:39.5696987Z Or undo this operation with:
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:39.5697205Z 
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:39.5697320Z   git switch -
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:39.5697494Z 
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:39.5697961Z Turn off this advice by setting config variable advice.detachedHead to false
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:39.5698381Z 
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:39.6714986Z   -> Baked release build commit: 801ef77e (PICASSOSUITE_BUILD_SHA)
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:39.7531304Z 
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:39.7531950Z [4] Preparing the NativeActivity launcher...
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:39.7542492Z Using app-specific adapter: adapters/picassosuite/prepare.sh
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:39.8011773Z Building x264 stable...
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:39.8093897Z   % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:39.8098185Z                                  Dload  Upload  Total   Spent   Left   Speed
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:39.8098611Z 
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:40.9145982Z   0      0   0      0   0      0      0      0                              0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:41.2316544Z  14  0.99M  14 143.1k   0      0 129.5k      0   00:07   00:01   00:06 129.6k
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:41.2317306Z 100  0.99M 100  0.99M   0      0 713.1k      0   00:01   00:01         129.6k
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:41.2317862Z 100  0.99M 100  0.99M   0      0 713.0k      0   00:01   00:01         129.6k
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:41.2318356Z 100  0.99M 100  0.99M   0      0 713.0k      0   00:01   00:01         129.6k
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.0115329Z platform:       AARCH64
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.0115854Z byte order:     little-endian
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.0116206Z system:         LINUX
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.0116502Z cli:            no
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.0116794Z libx264:        internal
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.0117018Z shared:         no
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.0117215Z static:         yes
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.0117422Z bashcompletion: no
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.0117641Z asm:            no
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.0117830Z interlaced:     yes
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.0118008Z avs:            no
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.0118191Z lavf:           no
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.0118364Z ffms:           no
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.0118548Z mp4:            no
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.0118726Z gpl:            yes
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.0118918Z thread:         posix
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.0119114Z opencl:         yes
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.0119335Z filters:        crop select_every
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.0119560Z lto:            no
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.0119965Z debug:          no
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.0120159Z gprof:          no
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.0120353Z strip:          no
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.0120545Z PIC:            yes
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.0120751Z bit depth:      all
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.0120934Z chroma format:  all
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.0142255Z 
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.0142439Z You can run 'make' or 'make fprofiled' now.
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.0247227Z cat common/opencl/x264-cl.h common/opencl/bidir.cl common/opencl/downscale.cl common/opencl/intra.cl common/opencl/motionsearch.cl common/opencl/subpel.cl common/opencl/weightp.cl | ./tools/cltostr.sh common/oclobj.h
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.0885319Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c common/osdep.c -o common/osdep.o -MMD -MF common/osdep.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.0888364Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c common/base.c -o common/base.o -MMD -MF common/base.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.0891126Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c common/cpu.c -o common/cpu.o -MMD -MF common/cpu.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.0912619Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c common/tables.c -o common/tables.o -MMD -MF common/tables.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.2174498Z common/cpu.c:111:22: warning: unused function 'x264_getauxval' [-Wunused-function]
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.2175492Z   111 | static unsigned long x264_getauxval( unsigned long type )
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.2176196Z       |                      ^~~~~~~~~~~~~~
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.2294243Z 1 warning generated.
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.2318116Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c encoder/api.c -o encoder/api.o -MMD -MF encoder/api.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.2360706Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c common/mc.c -o common/mc-8.o -MMD -MF common/mc-8.d -DHIGH_BIT_DEPTH=0 -DBIT_DEPTH=8
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.2365384Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c common/predict.c -o common/predict-8.o -MMD -MF common/predict-8.d -DHIGH_BIT_DEPTH=0 -DBIT_DEPTH=8
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.2710090Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c common/pixel.c -o common/pixel-8.o -MMD -MF common/pixel-8.d -DHIGH_BIT_DEPTH=0 -DBIT_DEPTH=8
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.6297699Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c common/macroblock.c -o common/macroblock-8.o -MMD -MF common/macroblock-8.d -DHIGH_BIT_DEPTH=0 -DBIT_DEPTH=8
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.6522328Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c common/frame.c -o common/frame-8.o -MMD -MF common/frame-8.d -DHIGH_BIT_DEPTH=0 -DBIT_DEPTH=8
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.8262202Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c common/dct.c -o common/dct-8.o -MMD -MF common/dct-8.d -DHIGH_BIT_DEPTH=0 -DBIT_DEPTH=8
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.8952203Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c common/cabac.c -o common/cabac-8.o -MMD -MF common/cabac-8.d -DHIGH_BIT_DEPTH=0 -DBIT_DEPTH=8
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:54.9844752Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c common/common.c -o common/common-8.o -MMD -MF common/common-8.d -DHIGH_BIT_DEPTH=0 -DBIT_DEPTH=8
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:55.0392685Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c common/rectangle.c -o common/rectangle-8.o -MMD -MF common/rectangle-8.d -DHIGH_BIT_DEPTH=0 -DBIT_DEPTH=8
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:55.0952322Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c common/set.c -o common/set-8.o -MMD -MF common/set-8.d -DHIGH_BIT_DEPTH=0 -DBIT_DEPTH=8
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:55.0973607Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c common/quant.c -o common/quant-8.o -MMD -MF common/quant-8.d -DHIGH_BIT_DEPTH=0 -DBIT_DEPTH=8
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:55.2382462Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c common/deblock.c -o common/deblock-8.o -MMD -MF common/deblock-8.d -DHIGH_BIT_DEPTH=0 -DBIT_DEPTH=8
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:55.2918080Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c common/vlc.c -o common/vlc-8.o -MMD -MF common/vlc-8.d -DHIGH_BIT_DEPTH=0 -DBIT_DEPTH=8
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:55.3033251Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c common/mvpred.c -o common/mvpred-8.o -MMD -MF common/mvpred-8.d -DHIGH_BIT_DEPTH=0 -DBIT_DEPTH=8
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:55.3594396Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c common/bitstream.c -o common/bitstream-8.o -MMD -MF common/bitstream-8.d -DHIGH_BIT_DEPTH=0 -DBIT_DEPTH=8
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:55.3782121Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c encoder/analyse.c -o encoder/analyse-8.o -MMD -MF encoder/analyse-8.d -DHIGH_BIT_DEPTH=0 -DBIT_DEPTH=8
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:55.4219905Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c encoder/me.c -o encoder/me-8.o -MMD -MF encoder/me-8.d -DHIGH_BIT_DEPTH=0 -DBIT_DEPTH=8
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:55.4274179Z In file included from encoder/analyse.c:33:
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:55.4301069Z In file included from encoder/rdo.c:53:
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:55.4301998Z encoder/cavlc.c:128:18: warning: variable 'i_sign' set but not used [-Wunused-but-set-variable]
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:55.4302781Z   128 |     unsigned int i_sign;
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:55.4303282Z       |                  ^
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:55.5087465Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c encoder/ratecontrol.c -o encoder/ratecontrol-8.o -MMD -MF encoder/ratecontrol-8.d -DHIGH_BIT_DEPTH=0 -DBIT_DEPTH=8
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:55.5891020Z encoder/ratecontrol.c:2883:9: warning: variable 'iterations' set but not used [-Wunused-but-set-variable]
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:55.5900308Z  2883 |     int iterations = 0;
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:55.5920741Z       |         ^
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:55.6011845Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c encoder/set.c -o encoder/set-8.o -MMD -MF encoder/set-8.d -DHIGH_BIT_DEPTH=0 -DBIT_DEPTH=8
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:56.0408511Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c encoder/macroblock.c -o encoder/macroblock-8.o -MMD -MF encoder/macroblock-8.d -DHIGH_BIT_DEPTH=0 -DBIT_DEPTH=8
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:56.0812294Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c encoder/cabac.c -o encoder/cabac-8.o -MMD -MF encoder/cabac-8.d -DHIGH_BIT_DEPTH=0 -DBIT_DEPTH=8
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:56.1740707Z 1 warning generated.
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:56.1772103Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c encoder/cavlc.c -o encoder/cavlc-8.o -MMD -MF encoder/cavlc-8.d -DHIGH_BIT_DEPTH=0 -DBIT_DEPTH=8
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:56.4322009Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c encoder/encoder.c -o encoder/encoder-8.o -MMD -MF encoder/encoder-8.d -DHIGH_BIT_DEPTH=0 -DBIT_DEPTH=8
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:56.5002368Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c encoder/lookahead.c -o encoder/lookahead-8.o -MMD -MF encoder/lookahead-8.d -DHIGH_BIT_DEPTH=0 -DBIT_DEPTH=8
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:56.5823207Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c common/threadpool.c -o common/threadpool-8.o -MMD -MF common/threadpool-8.d -DHIGH_BIT_DEPTH=0 -DBIT_DEPTH=8
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:56.6502099Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c common/opencl.c -o common/opencl-8.o -MMD -MF common/opencl-8.d -DHIGH_BIT_DEPTH=0 -DBIT_DEPTH=8
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:56.7126532Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c encoder/slicetype-cl.c -o encoder/slicetype-cl-8.o -MMD -MF encoder/slicetype-cl-8.d -DHIGH_BIT_DEPTH=0 -DBIT_DEPTH=8
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:56.8647728Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c common/mc.c -o common/mc-10.o -MMD -MF common/mc-10.d -DHIGH_BIT_DEPTH=1 -DBIT_DEPTH=10
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:56.9387234Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c common/predict.c -o common/predict-10.o -MMD -MF common/predict-10.d -DHIGH_BIT_DEPTH=1 -DBIT_DEPTH=10
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:57.2362299Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c common/pixel.c -o common/pixel-10.o -MMD -MF common/pixel-10.d -DHIGH_BIT_DEPTH=1 -DBIT_DEPTH=10
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:57.3182335Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c common/macroblock.c -o common/macroblock-10.o -MMD -MF common/macroblock-10.d -DHIGH_BIT_DEPTH=1 -DBIT_DEPTH=10
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:57.6042658Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c common/frame.c -o common/frame-10.o -MMD -MF common/frame-10.d -DHIGH_BIT_DEPTH=1 -DBIT_DEPTH=10
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:57.9042363Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c common/dct.c -o common/dct-10.o -MMD -MF common/dct-10.d -DHIGH_BIT_DEPTH=1 -DBIT_DEPTH=10
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:57.9196044Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c common/cabac.c -o common/cabac-10.o -MMD -MF common/cabac-10.d -DHIGH_BIT_DEPTH=1 -DBIT_DEPTH=10
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:58.0027378Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c common/common.c -o common/common-10.o -MMD -MF common/common-10.d -DHIGH_BIT_DEPTH=1 -DBIT_DEPTH=10
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:58.0052868Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c common/rectangle.c -o common/rectangle-10.o -MMD -MF common/rectangle-10.d -DHIGH_BIT_DEPTH=1 -DBIT_DEPTH=10
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:58.0527485Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c common/set.c -o common/set-10.o -MMD -MF common/set-10.d -DHIGH_BIT_DEPTH=1 -DBIT_DEPTH=10
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:58.0601887Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c common/quant.c -o common/quant-10.o -MMD -MF common/quant-10.d -DHIGH_BIT_DEPTH=1 -DBIT_DEPTH=10
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:58.2312123Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c common/deblock.c -o common/deblock-10.o -MMD -MF common/deblock-10.d -DHIGH_BIT_DEPTH=1 -DBIT_DEPTH=10
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:58.2572875Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c common/vlc.c -o common/vlc-10.o -MMD -MF common/vlc-10.d -DHIGH_BIT_DEPTH=1 -DBIT_DEPTH=10
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:58.3205532Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c common/mvpred.c -o common/mvpred-10.o -MMD -MF common/mvpred-10.d -DHIGH_BIT_DEPTH=1 -DBIT_DEPTH=10
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:58.4081177Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c common/bitstream.c -o common/bitstream-10.o -MMD -MF common/bitstream-10.d -DHIGH_BIT_DEPTH=1 -DBIT_DEPTH=10
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:58.4650889Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c encoder/analyse.c -o encoder/analyse-10.o -MMD -MF encoder/analyse-10.d -DHIGH_BIT_DEPTH=1 -DBIT_DEPTH=10
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:58.5041133Z 1 warning generated.
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:58.5081608Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c encoder/me.c -o encoder/me-10.o -MMD -MF encoder/me-10.d -DHIGH_BIT_DEPTH=1 -DBIT_DEPTH=10
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:58.5125258Z In file included from encoder/analyse.c:33:
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:58.5151054Z In file included from encoder/rdo.c:53:
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:58.5180516Z encoder/cavlc.c:128:18: warning: variable 'i_sign' set but not used [-Wunused-but-set-variable]
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:58.5181433Z   128 |     unsigned int i_sign;
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:58.5210708Z       |                  ^
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:58.5302764Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c encoder/ratecontrol.c -o encoder/ratecontrol-10.o -MMD -MF encoder/ratecontrol-10.d -DHIGH_BIT_DEPTH=1 -DBIT_DEPTH=10
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:58.6051751Z encoder/ratecontrol.c:2883:9: warning: variable 'iterations' set but not used [-Wunused-but-set-variable]
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:58.6080319Z  2883 |     int iterations = 0;
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:58.6090406Z       |         ^
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:58.6241968Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c encoder/set.c -o encoder/set-10.o -MMD -MF encoder/set-10.d -DHIGH_BIT_DEPTH=1 -DBIT_DEPTH=10
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:59.0932346Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c encoder/macroblock.c -o encoder/macroblock-10.o -MMD -MF encoder/macroblock-10.d -DHIGH_BIT_DEPTH=1 -DBIT_DEPTH=10
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:59.0981876Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c encoder/cabac.c -o encoder/cabac-10.o -MMD -MF encoder/cabac-10.d -DHIGH_BIT_DEPTH=1 -DBIT_DEPTH=10
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:59.1500794Z 1 warning generated.
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:59.1572167Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c encoder/cavlc.c -o encoder/cavlc-10.o -MMD -MF encoder/cavlc-10.d -DHIGH_BIT_DEPTH=1 -DBIT_DEPTH=10
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:59.4022284Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c encoder/encoder.c -o encoder/encoder-10.o -MMD -MF encoder/encoder-10.d -DHIGH_BIT_DEPTH=1 -DBIT_DEPTH=10
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:59.5112180Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c encoder/lookahead.c -o encoder/lookahead-10.o -MMD -MF encoder/lookahead-10.d -DHIGH_BIT_DEPTH=1 -DBIT_DEPTH=10
+Build picassosuite	Build picassosuite APK	2026-11-17T23:34:59.5914394Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android28-clang -Wshadow -O3 -ffast-math -fPIC -Wall -I. -I. -std=gnu99 -D_GNU_SOURCE -fPIC -fomit-frame-pointer -fno-tree-vectorize -fvisibility=hidden   -c common/threadpool.c -o common/threadpool-10.o -MMD -MF common/threadpool-10.d -DHIGH_BIT_DEPTH=1 -DBIT_DEPTH=10
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:00.9281328Z 1 warning generated.
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:00.9340911Z rm -f libx264.a
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:00.9355013Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-ar rc libx264.a common/osdep.o common/base.o common/cpu.o common/tables.o encoder/api.o common/mc-8.o common/predict-8.o common/pixel-8.o common/macroblock-8.o common/frame-8.o common/dct-8.o common/cabac-8.o common/common-8.o common/rectangle-8.o common/set-8.o common/quant-8.o common/deblock-8.o common/vlc-8.o common/mvpred-8.o common/bitstream-8.o encoder/analyse-8.o encoder/me-8.o encoder/ratecontrol-8.o encoder/set-8.o encoder/macroblock-8.o encoder/cabac-8.o encoder/cavlc-8.o encoder/encoder-8.o encoder/lookahead-8.o common/threadpool-8.o common/opencl-8.o encoder/slicetype-cl-8.o common/mc-10.o common/predict-10.o common/pixel-10.o common/macroblock-10.o common/frame-10.o common/dct-10.o common/cabac-10.o common/common-10.o common/rectangle-10.o common/set-10.o common/quant-10.o common/deblock-10.o common/vlc-10.o common/mvpred-10.o common/bitstream-10.o encoder/analyse-10.o encoder/me-10.o encoder/ratecontrol-10.o encoder/set-10.o encoder/macroblock-10.o encoder/cabac-10.o encoder/cavlc-10.o encoder/encoder-10.o encoder/lookahead-10.o common/threadpool-10.o 
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:01.7490776Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-ranlib libx264.a
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:01.7731140Z install -d /home/runner/work/Artcraft-android32/Artcraft-android32/source/picassosuite/ffmpeg-deps/include
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:01.7758295Z install -d /home/runner/work/Artcraft-android32/Artcraft-android32/source/picassosuite/ffmpeg-deps/lib/pkgconfig
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:01.7780757Z install -m 644 ./x264.h x264_config.h /home/runner/work/Artcraft-android32/Artcraft-android32/source/picassosuite/ffmpeg-deps/include
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:01.7803242Z install -m 644 x264.pc /home/runner/work/Artcraft-android32/Artcraft-android32/source/picassosuite/ffmpeg-deps/lib/pkgconfig
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:01.7825176Z install -d /home/runner/work/Artcraft-android32/Artcraft-android32/source/picassosuite/ffmpeg-deps/lib
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:01.7846465Z install -m 644 libx264.a /home/runner/work/Artcraft-android32/Artcraft-android32/source/picassosuite/ffmpeg-deps/lib
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:01.7873866Z /usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/llvm-ranlib /home/runner/work/Artcraft-android32/Artcraft-android32/source/picassosuite/ffmpeg-deps/lib/libx264.a
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:01.7894927Z Building libvpx v1.14.1...
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:01.7978570Z   % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:01.7979186Z                                  Dload  Upload  Total   Spent   Left   Speed
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:01.7979543Z 
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:01.9469220Z   0      0   0      0   0      0      0      0                              0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:01.9469966Z   0      0   0      0   0      0      0      0                              0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:01.9470379Z   0      0   0      0   0      0      0      0                              0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:01.9470707Z 
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:02.2791036Z   0      0   0      0   0      0      0      0                              0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:02.2791525Z 100  5.35M 100  5.35M   0      0 11.14M      0                              0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:02.2791876Z 100  5.35M 100  5.35M   0      0 11.13M      0                              0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:02.2792200Z 100  5.35M 100  5.35M   0      0 11.13M      0                              0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:02.6333656Z   disabling examples
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:02.6363417Z   disabling tools
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:02.6393845Z   disabling docs
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:02.6424770Z   enabling vp9_highbitdepth
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:02.6454749Z   enabling pic
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:02.6485219Z   disabling shared
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:02.6633127Z   enabling vp8_encoder
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:02.6633537Z   enabling vp8_decoder
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:02.6633839Z   enabling vp9_encoder
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:02.6634146Z   enabling vp9_decoder
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:02.6634659Z Configuring for target 'arm64-android-gcc'
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:02.6688190Z   enabling arm64
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:02.7114329Z   enabling runtime_cpu_detect
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:02.8023015Z Assuming standalone build with NDK toolchain.
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:02.8023610Z See build/make/Android.mk for details.
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:02.8023975Z   enabling unit_tests
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:02.8231465Z   enabling neon
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:02.8521073Z   enabling neon_dotprod
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:02.9067487Z   enabling neon_i8mm
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:03.0520100Z   enabling sve
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:07.5834591Z   enabling webm_io
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:07.5834999Z   enabling libyuv
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:09.5225197Z Creating makefiles for arm64-android-gcc libs
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:09.6480762Z     [CREATE] vpx_scale_rtcd.h
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:09.6482510Z     [CREATE] vpx_dsp_rtcd.h
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:09.6510317Z     [CREATE] vp8_rtcd.h
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:09.6510832Z     [CREATE] vp9_rtcd.h
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.0504042Z     [DEP] vpx/src/vpx_decoder.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.0505856Z     [DEP] vpx/src/vpx_encoder.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.0506474Z     [DEP] vpx/src/vpx_codec.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.0530458Z     [DEP] vpx/src/vpx_image.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.1051372Z     [DEP] vpx/src/vpx_tpl.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.1052176Z     [DEP] vpx_mem/vpx_mem.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.1058671Z     [DEP] vpx_scale/generic/yv12config.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.1064003Z     [DEP] vpx_scale/generic/vpx_scale.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.1341522Z     [DEP] vpx_scale/generic/yv12extend.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.1343730Z     [DEP] vpx_scale/generic/gen_scalers.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.1347295Z     [DEP] vpx_scale/vpx_scale_rtcd.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.1421676Z     [DEP] vpx_ports/aarch64_cpudetect.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.1621928Z     [DEP] vpx_dsp/prob.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.1631622Z     [DEP] vpx_dsp/bitwriter.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.1650153Z     [DEP] vpx_dsp/bitwriter_buffer.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.1666957Z     [DEP] vpx_dsp/psnr.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.1893937Z     [DEP] vpx_dsp/sse.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.1904311Z     [DEP] vpx_dsp/arm/sse_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.1920922Z     [DEP] vpx_dsp/arm/sse_neon_dotprod.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.1981831Z     [DEP] vpx_dsp/bitreader.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.2197627Z     [DEP] vpx_dsp/bitreader_buffer.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.2280408Z     [DEP] vpx_dsp/intrapred.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.2355498Z     [DEP] vpx_dsp/arm/highbd_intrapred_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.2398103Z     [DEP] vpx_dsp/arm/intrapred_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.2473266Z     [DEP] vpx_dsp/vpx_convolve.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.2588777Z     [DEP] vpx_dsp/arm/highbd_vpx_convolve_copy_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.2755402Z     [DEP] vpx_dsp/arm/highbd_vpx_convolve_avg_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.2816593Z     [DEP] vpx_dsp/arm/highbd_vpx_convolve8_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.2850403Z     [DEP] vpx_dsp/arm/highbd_vpx_convolve_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.3046821Z     [DEP] vpx_dsp/arm/vpx_scaled_convolve8_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.3140301Z     [DEP] vpx_dsp/arm/vpx_convolve_copy_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.3221528Z     [DEP] vpx_dsp/arm/vpx_convolve8_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.3319199Z     [DEP] vpx_dsp/arm/vpx_convolve_avg_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.3540948Z     [DEP] vpx_dsp/arm/vpx_convolve_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.3643046Z     [DEP] vpx_dsp/arm/vpx_convolve8_neon_dotprod.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.3711292Z     [DEP] vpx_dsp/arm/vpx_convolve_neon_dotprod.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.3758552Z     [DEP] vpx_dsp/arm/vpx_convolve8_neon_i8mm.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.3897322Z     [DEP] vpx_dsp/arm/vpx_convolve_neon_i8mm.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.4125266Z     [DEP] vpx_dsp/loopfilter.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.4138678Z     [DEP] vpx_dsp/arm/loopfilter_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.4248285Z     [DEP] vpx_dsp/arm/highbd_loopfilter_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.4372322Z     [DEP] vpx_dsp/fwd_txfm.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.4460996Z     [DEP] vpx_dsp/arm/fdct4x4_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.4598733Z     [DEP] vpx_dsp/arm/fdct8x8_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.4657972Z     [DEP] vpx_dsp/arm/fdct16x16_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.4729990Z     [DEP] vpx_dsp/arm/fdct32x32_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.4920005Z     [DEP] vpx_dsp/arm/fdct_partial_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.5110843Z     [DEP] vpx_dsp/inv_txfm.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.5180599Z     [DEP] vpx_dsp/arm/highbd_idct4x4_add_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.5200408Z     [DEP] vpx_dsp/arm/highbd_idct8x8_add_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.5387172Z     [DEP] vpx_dsp/arm/highbd_idct16x16_add_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.5419319Z     [DEP] vpx_dsp/arm/highbd_idct32x32_add_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.5608895Z     [DEP] vpx_dsp/arm/highbd_idct32x32_34_add_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.5670513Z     [DEP] vpx_dsp/arm/highbd_idct32x32_135_add_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.5870908Z     [DEP] vpx_dsp/arm/highbd_idct32x32_1024_add_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.5895256Z     [DEP] vpx_dsp/arm/idct4x4_1_add_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.6075621Z     [DEP] vpx_dsp/arm/idct4x4_add_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.6128112Z     [DEP] vpx_dsp/arm/idct8x8_1_add_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.6360858Z     [DEP] vpx_dsp/arm/idct8x8_add_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.6390724Z     [DEP] vpx_dsp/arm/idct16x16_1_add_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.6561004Z     [DEP] vpx_dsp/arm/idct16x16_add_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.6574907Z     [DEP] vpx_dsp/arm/idct32x32_1_add_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.6835772Z     [DEP] vpx_dsp/arm/idct32x32_34_add_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.6849427Z     [DEP] vpx_dsp/arm/idct32x32_135_add_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.7034148Z     [DEP] vpx_dsp/arm/idct32x32_add_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.7060749Z     [DEP] vpx_dsp/quantize.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.7312090Z     [DEP] vpx_dsp/arm/quantize_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.7330667Z     [DEP] vpx_dsp/arm/highbd_quantize_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.7378280Z     [DEP] vpx_dsp/avg.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.7501378Z     [DEP] vpx_dsp/arm/avg_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.7666323Z     [DEP] vpx_dsp/arm/hadamard_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.7827089Z     [DEP] vpx_dsp/arm/highbd_hadamard_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.7829065Z     [DEP] vpx_dsp/arm/highbd_avg_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.7976504Z     [DEP] vpx_dsp/skin_detection.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.8140822Z     [DEP] vpx_dsp/sad.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.8230538Z     [DEP] vpx_dsp/subtract.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.8302519Z     [DEP] vpx_dsp/sum_squares.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.8328636Z     [DEP] vpx_dsp/arm/sum_squares_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.8430069Z     [DEP] vpx_dsp/arm/sad4d_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.8516537Z     [DEP] vpx_dsp/arm/sad4d_neon_dotprod.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.8590765Z     [DEP] vpx_dsp/arm/sad_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.8750820Z     [DEP] vpx_dsp/arm/sad_neon_dotprod.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.8910658Z     [DEP] vpx_dsp/arm/subtract_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.8990728Z     [DEP] vpx_dsp/arm/highbd_sad4d_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.9020451Z     [DEP] vpx_dsp/arm/highbd_sad_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.9230228Z     [DEP] vpx_dsp/variance.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.9331260Z     [DEP] vpx_dsp/arm/avg_pred_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.9452027Z     [DEP] vpx_dsp/arm/subpel_variance_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.9460806Z     [DEP] vpx_dsp/arm/variance_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.9538944Z     [DEP] vpx_dsp/arm/variance_neon_dotprod.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.9819386Z     [DEP] vpx_dsp/arm/highbd_avg_pred_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.9918904Z     [DEP] vpx_dsp/arm/highbd_sse_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:10.9921710Z     [DEP] vpx_dsp/arm/highbd_variance_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.0031330Z     [DEP] vpx_dsp/arm/highbd_subpel_variance_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.0290761Z     [DEP] vpx_dsp/vpx_dsp_rtcd.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.0373843Z     [DEP] vpx_util/vpx_thread.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.0391164Z     [DEP] vpx_util/vpx_write_yuv_frame.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.0465332Z     [DEP] vp8/common/alloccommon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.0583439Z     [DEP] vp8/common/blockd.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.0693311Z     [DEP] vp8/common/dequantize.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.0720374Z     [DEP] vp8/common/entropy.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.0774848Z     [DEP] vp8/common/entropymode.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.0906939Z     [DEP] vp8/common/entropymv.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.0992975Z     [DEP] vp8/common/extend.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.1010377Z     [DEP] vp8/common/filter.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.1091021Z     [DEP] vp8/common/findnearmv.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.1176808Z     [DEP] vp8/common/generic/systemdependent.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.1265232Z     [DEP] vp8/common/idct_blk.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.1308012Z     [DEP] vp8/common/idctllm.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.1333926Z     [DEP] vp8/common/rtcd.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.1513926Z     [DEP] vp8/common/vp8_loopfilter.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.1575064Z     [DEP] vp8/common/loopfilter_filters.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.1579809Z     [DEP] vp8/common/mbpitch.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.1605285Z     [DEP] vp8/common/modecont.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.1796714Z     [DEP] vp8/common/quant_common.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.1840943Z     [DEP] vp8/common/reconinter.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.1860720Z     [DEP] vp8/common/reconintra.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.1871800Z     [DEP] vp8/common/reconintra4x4.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.2086470Z     [DEP] vp8/common/setupintrarecon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.2140077Z     [DEP] vp8/common/swapyv12buffer.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.2160846Z     [DEP] vp8/common/treecoder.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.2172585Z     [DEP] vp8/common/arm/loopfilter_arm.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.2410784Z     [DEP] vp8/common/arm/neon/bilinearpredict_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.2432374Z     [DEP] vp8/common/arm/neon/copymem_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.2438412Z     [DEP] vp8/common/arm/neon/dc_only_idct_add_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.2500545Z     [DEP] vp8/common/arm/neon/dequant_idct_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.2844653Z     [DEP] vp8/common/arm/neon/dequantizeb_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.2860343Z     [DEP] vp8/common/arm/neon/idct_blk_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.2898491Z     [DEP] vp8/common/arm/neon/iwalsh_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.2920618Z     [DEP] vp8/common/arm/neon/vp8_loopfilter_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.3280775Z     [DEP] vp8/common/arm/neon/loopfiltersimplehorizontaledge_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.3287972Z     [DEP] vp8/common/arm/neon/loopfiltersimpleverticaledge_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.3340962Z     [DEP] vp8/common/arm/neon/mbloopfilter_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.3354332Z     [DEP] vp8/common/arm/neon/shortidct4x4llm_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.3740284Z     [DEP] vp8/common/arm/neon/sixtappredict_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.3742440Z     [DEP] vp8/vp8_cx_iface.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.3775685Z     [DEP] vp8/encoder/bitstream.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.3786831Z     [DEP] vp8/encoder/boolhuff.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.4141846Z     [DEP] vp8/encoder/copy_c.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.4144372Z     [DEP] vp8/encoder/encodeframe.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.4145849Z     [DEP] vp8/encoder/dct.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.4149818Z     [DEP] vp8/encoder/encodeintra.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.4411198Z     [DEP] vp8/encoder/encodemb.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.4417995Z     [DEP] vp8/encoder/encodemv.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.4469457Z     [DEP] vp8/encoder/ethreading.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.4696474Z     [DEP] vp8/encoder/firstpass.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.4724479Z     [DEP] vp8/encoder/denoising.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.4756952Z     [DEP] vp8/encoder/lookahead.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.4912103Z     [DEP] vp8/encoder/mcomp.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.5013522Z     [DEP] vp8/encoder/modecosts.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.5023890Z     [DEP] vp8/encoder/onyx_if.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.5028556Z     [DEP] vp8/encoder/pickinter.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.5270092Z     [DEP] vp8/encoder/picklpf.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.5340622Z     [DEP] vp8/encoder/vp8_quantize.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.5359172Z     [DEP] vp8/encoder/ratectrl.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.5391489Z     [DEP] vp8/encoder/rdopt.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.5621798Z     [DEP] vp8/encoder/segmentation.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.5653075Z     [DEP] vp8/common/vp8_skin_detection.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.5697422Z     [DEP] vp8/encoder/tokenize.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.5735475Z     [DEP] vp8/encoder/treewriter.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.5982432Z     [DEP] vp8/encoder/temporal_filter.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.6001406Z     [DEP] vp8/encoder/arm/neon/denoising_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.6003288Z     [DEP] vp8/encoder/arm/neon/fastquantizeb_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.6044137Z     [DEP] vp8/encoder/arm/neon/shortfdct_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.6317701Z     [DEP] vp8/encoder/arm/neon/vp8_shortwalsh4x4_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.6687131Z     [DEP] vp8/vp8_dx_iface.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.6688290Z     [DEP] vp8/decoder/dboolhuff.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.6689867Z     [DEP] vp8/decoder/decodemv.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.6692313Z     [DEP] vp8/decoder/decodeframe.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.7018479Z     [DEP] vp8/decoder/detokenize.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.7019505Z     [DEP] vp8/decoder/onyxd_if.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.7044487Z     [DEP] vp8/decoder/threading.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.7066484Z     [DEP] vp9/vp9_iface_common.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.7318392Z     [DEP] vp9/common/vp9_alloccommon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.7346458Z     [DEP] vp9/common/vp9_blockd.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.7385503Z     [DEP] vp9/common/vp9_entropy.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.7387266Z     [DEP] vp9/common/vp9_entropymode.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.7647906Z     [DEP] vp9/common/vp9_entropymv.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.7670679Z     [DEP] vp9/common/vp9_frame_buffers.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.7682538Z     [DEP] vp9/common/vp9_idct.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.7750609Z     [DEP] vp9/common/vp9_filter.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.7969940Z     [DEP] vp9/common/vp9_pred_common.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.7977372Z     [DEP] vp9/common/vp9_rtcd.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.7985089Z     [DEP] vp9/common/vp9_scale.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.8019444Z     [DEP] vp9/common/vp9_seg_common.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.8250430Z     [DEP] vp9/common/vp9_tile_common.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.8281265Z     [DEP] vp9/common/vp9_loopfilter.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.8313750Z     [DEP] vp9/common/vp9_mvref_common.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.8314648Z     [DEP] vp9/common/vp9_thread_common.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.8573487Z     [DEP] vp9/common/vp9_quant_common.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.8630519Z     [DEP] vp9/common/vp9_reconinter.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.8650608Z     [DEP] vp9/common/vp9_common_data.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.8653633Z     [DEP] vp9/common/vp9_reconintra.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.8881383Z     [DEP] vp9/common/vp9_scan.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.8930513Z     [DEP] vp9/common/arm/neon/vp9_iht4x4_add_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.8942824Z     [DEP] vp9/common/arm/neon/vp9_iht8x8_add_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.9006791Z     [DEP] vp9/common/arm/neon/vp9_iht16x16_add_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.9167420Z     [DEP] vp9/common/arm/neon/vp9_highbd_iht4x4_add_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.9375877Z     [DEP] vp9/common/arm/neon/vp9_highbd_iht8x8_add_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.9430420Z     [DEP] vp9/common/arm/neon/vp9_highbd_iht16x16_add_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.9488200Z     [DEP] vp9/vp9_cx_iface.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.9680841Z     [DEP] vp9/encoder/vp9_bitstream.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.9855243Z     [DEP] vp9/encoder/vp9_context_tree.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.9884863Z     [DEP] vp9/encoder/vp9_cost.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:11.9928504Z     [DEP] vp9/encoder/vp9_dct.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.0041396Z     [DEP] vp9/encoder/vp9_encodeframe.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.0180942Z     [DEP] vp9/encoder/vp9_encodemb.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.0211355Z     [DEP] vp9/encoder/vp9_encodemv.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.0241260Z     [DEP] vp9/encoder/vp9_ethread.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.0410522Z     [DEP] vp9/encoder/vp9_extend.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.0570928Z     [DEP] vp9/encoder/vp9_firstpass.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.0620545Z     [DEP] vp9/encoder/vp9_frame_scale.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.0650613Z     [DEP] vp9/encoder/vp9_lookahead.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.0695471Z     [DEP] vp9/encoder/vp9_multi_thread.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.0918944Z     [DEP] vp9/encoder/vp9_mcomp.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.0945747Z     [DEP] vp9/encoder/vp9_encoder.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.1030500Z     [DEP] vp9/encoder/vp9_picklpf.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.1050869Z     [DEP] vp9/encoder/vp9_quantize.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.1310110Z     [DEP] vp9/encoder/vp9_ratectrl.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.1323524Z     [DEP] vp9/encoder/vp9_rd.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.1444684Z     [DEP] vp9/encoder/vp9_rdopt.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.1446905Z     [DEP] vp9/encoder/vp9_pickmode.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.1723951Z     [DEP] vp9/encoder/vp9_segmentation.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.1731342Z     [DEP] vp9/encoder/vp9_speed_features.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.1813271Z     [DEP] vp9/encoder/vp9_svc_layercontext.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.1816703Z     [DEP] vp9/encoder/vp9_subexp.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.2110818Z     [DEP] vp9/encoder/vp9_resize.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.2140333Z     [DEP] vp9/encoder/vp9_tokenize.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.2170295Z     [DEP] vp9/encoder/vp9_treewriter.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.2234778Z     [DEP] vp9/encoder/vp9_aq_variance.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.2396712Z     [DEP] vp9/encoder/vp9_aq_360.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.2398854Z     [DEP] vp9/encoder/vp9_aq_cyclicrefresh.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.2471049Z     [DEP] vp9/encoder/vp9_aq_complexity.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.2604837Z     [DEP] vp9/encoder/vp9_alt_ref_aq.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.2780308Z     [DEP] vp9/encoder/vp9_skin_detection.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.2805003Z     [DEP] vp9/encoder/vp9_noise_estimate.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.2829325Z     [DEP] vp9/encoder/vp9_ext_ratectrl.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.2992655Z     [DEP] vp9/encoder/vp9_temporal_filter.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.3158444Z     [DEP] vp9/encoder/vp9_tpl_model.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.3160431Z     [DEP] vp9/encoder/vp9_mbgraph.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.3186690Z     [DEP] vp9/encoder/arm/neon/vp9_temporal_filter_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.3412588Z     [DEP] vp9/encoder/arm/neon/vp9_diamond_search_sad_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.3506758Z     [DEP] vp9/encoder/arm/neon/vp9_highbd_temporal_filter_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.3520183Z     [DEP] vp9/encoder/arm/neon/vp9_dct_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.3736622Z     [DEP] vp9/encoder/arm/neon/vp9_error_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.3954971Z     [DEP] vp9/encoder/arm/neon/vp9_frame_scale_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.4001485Z     [DEP] vp9/encoder/arm/neon/vp9_quantize_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.4054176Z     [DEP] vp9/encoder/arm/neon/vp9_highbd_error_neon.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.4554008Z     [DEP] vp9/vp9_dx_iface.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.4555315Z     [DEP] vp9/decoder/vp9_decodemv.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.4559625Z     [DEP] vp9/decoder/vp9_decodeframe.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.4570106Z     [DEP] vp9/decoder/vp9_detokenize.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.4888261Z     [DEP] vp9/decoder/vp9_decoder.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.4904411Z     [DEP] vp9/decoder/vp9_dsubexp.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.4905091Z     [DEP] vp9/decoder/vp9_job_queue.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.4920143Z     [DEP] vpx_config.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.5226933Z     [DEP] vp9/ratectrl_rtc.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.5228822Z     [DEP] vp8/vp8_ratectrl_rtc.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.5230099Z     [DEP] third_party/googletest/src/src/gtest-all.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.5244214Z     [DEP] ivfenc.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.5528114Z     [DEP] md5_utils.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:12.5730113Z     [DEP] test/active_map_refresh_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:13.6712714Z     [DEP] test/active_map_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:13.6733698Z     [DEP] test/alt_ref_aq_segment_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:14.1569775Z     [DEP] test/altref_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:14.1571771Z     [DEP] test/aq_segment_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:14.1572358Z     [DEP] test/avg_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:14.2392252Z     [DEP] test/bench.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:14.2692066Z     [DEP] test/borders_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:14.2718070Z     [DEP] test/byte_alignment_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:14.2992899Z     [DEP] test/comp_avg_pred_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:14.3523580Z     [DEP] test/config_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:14.3833833Z     [DEP] test/convolve_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:14.3880251Z     [DEP] test/cpu_speed_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:14.4031901Z     [DEP] test/cq_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:14.4691620Z     [DEP] test/dct16x16_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:14.5028604Z     [DEP] test/dct32x32_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:14.5060332Z     [DEP] test/dct_partial_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:14.5168592Z     [DEP] test/dct_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:14.5890537Z     [DEP] test/decode_api_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:14.6250764Z     [DEP] test/decode_corrupted.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:14.6257680Z     [DEP] test/decode_svc_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:14.6336095Z     [DEP] test/decode_test_driver.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:14.7106044Z     [DEP] test/encode_api_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:14.7363571Z     [DEP] test/encode_test_driver.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:14.7420386Z     [DEP] test/error_resilience_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:14.7508114Z     [DEP] test/external_frame_buffer_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:14.8360694Z     [DEP] test/fdct8x8_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:14.8530817Z     [DEP] test/frame_size_tests.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:14.8584462Z     [DEP] test/hadamard_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:14.8651197Z     [DEP] test/idct8x8_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:14.9560693Z     [DEP] test/idct_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:14.9671938Z     [DEP] test/init_vpx_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:14.9761873Z     [DEP] test/invalid_file_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:14.9783899Z     [DEP] test/keyframe_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:15.0719486Z     [DEP] test/level_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:15.0792815Z     [DEP] test/lpf_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:15.0950877Z     [DEP] test/minmax_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:15.0980338Z     [DEP] test/partial_idct_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:15.1926482Z     [DEP] test/predict_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:15.1993076Z     [DEP] test/quantize_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:15.2122005Z     [DEP] test/realtime_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:15.2151311Z     [DEP] test/resize_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:15.3120827Z     [DEP] test/sad_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:15.3208359Z     [DEP] test/set_roi.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:15.3308759Z     [DEP] test/sum_squares_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:15.3316073Z     [DEP] test/superframe_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:15.4320928Z     [DEP] test/svc_datarate_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:15.4380426Z     [DEP] test/svc_end_to_end_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:15.4480966Z     [DEP] test/svc_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:15.4498505Z     [DEP] test/test_libvpx.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:15.5510613Z     [DEP] test/test_vector_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:15.5557838Z     [DEP] test/test_vectors.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:15.5607275Z     [DEP] test/tile_independence_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:15.5620173Z     [DEP] test/timestamp_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:15.5801958Z     [DEP] test/user_priv_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:15.6680892Z     [DEP] test/variance_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:15.6747259Z     [DEP] test/vp8_boolcoder_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:15.6766104Z     [DEP] test/vp8_datarate_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:15.6975923Z     [DEP] test/vp8_decrypt_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:15.7906081Z     [DEP] test/vp8_fdct4x4_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:15.7906935Z     [DEP] test/vp8_fragments_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:15.7960694Z     [DEP] test/vp9_arf_freq_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:15.8110021Z     [DEP] test/vp9_block_error_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:15.9100857Z     [DEP] test/vp9_boolcoder_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:15.9135942Z     [DEP] test/vp9_datarate_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:15.9170920Z     [DEP] test/vp9_decrypt_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:15.9300219Z     [DEP] test/vp9_encoder_parms_get_to_decoder.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:16.0257490Z     [DEP] test/vp9_end_to_end_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:16.0281404Z     [DEP] test/vp9_ethread_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:16.0330132Z     [DEP] test/vp9_ext_ratectrl_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:16.0490803Z     [DEP] test/vp9_intrapred_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:16.1442220Z     [DEP] test/vp9_lossless_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:16.1460494Z     [DEP] test/vp9_motion_vector_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:16.1512891Z     [DEP] test/vp9_quantize_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:16.1673269Z     [DEP] test/vp9_roi_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:16.2649284Z     [DEP] test/vp9_scale_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:16.2664228Z     [DEP] test/vp9_skip_loopfilter_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:16.2690868Z     [DEP] test/vp9_subtract_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:16.2844297Z     [DEP] test/vp9_thread_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:16.3835420Z     [DEP] test/vpx_image_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:16.3836042Z     [DEP] test/vpx_scale_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:16.3855716Z     [DEP] test/y4m_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:16.4026390Z     [DEP] test/yuv_temporal_filter_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:16.4999072Z     [DEP] third_party/libwebm/mkvparser/mkvparser.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:16.5000732Z     [DEP] third_party/libwebm/mkvparser/mkvreader.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:16.5004687Z     [DEP] webmdec.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:16.5214223Z     [DEP] y4menc.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:16.5307154Z     [DEP] y4minput.c.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:16.5626761Z     [DEP] test/test_intra_pred_speed.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:16.6428643Z     [DEP] test/test_rc_interface.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:16.6431550Z     [DEP] test/vp8_ratectrl_rtc_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:16.6432188Z     [DEP] test/vp9_ratectrl_rtc_test.cc.d
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:16.8991971Z     [CC] vpx/src/vpx_decoder.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:16.8993653Z     [CC] vpx/src/vpx_encoder.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:16.8995866Z     [CC] vpx/src/vpx_codec.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:16.9028701Z     [CC] vpx/src/vpx_image.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:16.9495643Z     [CC] vpx/src/vpx_tpl.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:16.9501554Z     [CC] vpx_mem/vpx_mem.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:16.9542573Z     [CC] vpx_scale/generic/vpx_scale.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:16.9740812Z     [CC] vpx_scale/generic/yv12config.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:16.9859763Z     [CC] vpx_scale/generic/yv12extend.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:16.9928635Z     [CC] vpx_scale/generic/gen_scalers.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:17.0266170Z     [CC] vpx_scale/vpx_scale_rtcd.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:17.0512991Z     [CC] vpx_ports/aarch64_cpudetect.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:17.0584117Z     [CC] vpx_dsp/prob.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:17.0826052Z     [CC] vpx_dsp/bitwriter.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:17.0940785Z     [CC] vpx_dsp/bitwriter_buffer.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:17.1035213Z     [CC] vpx_dsp/psnr.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:17.1239449Z     [CC] vpx_dsp/sse.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:17.1250724Z     [CC] vpx_dsp/arm/sse_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:17.1345828Z     [CC] vpx_dsp/arm/sse_neon_dotprod.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:17.1788640Z     [CC] vpx_dsp/bitreader.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:17.2100937Z     [CC] vpx_dsp/bitreader_buffer.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:17.2370828Z     [CC] vpx_dsp/intrapred.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:17.2482241Z     [CC] vpx_dsp/arm/highbd_intrapred_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:17.3149997Z     [CC] vpx_dsp/arm/intrapred_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:17.3165397Z     [CC] vpx_dsp/vpx_convolve.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:17.4971400Z     [CC] vpx_dsp/arm/highbd_vpx_convolve_copy_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:17.6131184Z     [CC] vpx_dsp/arm/highbd_vpx_convolve_avg_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:17.7304458Z     [CC] vpx_dsp/arm/highbd_vpx_convolve8_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:17.7510715Z     [CC] vpx_dsp/arm/highbd_vpx_convolve_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:17.7900734Z     [CC] vpx_dsp/arm/vpx_scaled_convolve8_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:17.9660620Z     [CC] vpx_dsp/arm/vpx_convolve_copy_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:17.9690361Z     [CC] vpx_dsp/arm/vpx_convolve8_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:18.0790913Z     [CC] vpx_dsp/arm/vpx_convolve_avg_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:18.1840702Z     [CC] vpx_dsp/arm/vpx_convolve_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:18.1940499Z     [CC] vpx_dsp/arm/vpx_convolve8_neon_dotprod.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:18.2210886Z     [CC] vpx_dsp/arm/vpx_convolve_neon_dotprod.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:18.3265268Z     [CC] vpx_dsp/arm/vpx_convolve8_neon_i8mm.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:18.3850693Z     [CC] vpx_dsp/arm/vpx_convolve_neon_i8mm.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:18.4900648Z     [CC] vpx_dsp/loopfilter.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:18.5027892Z     [CC] vpx_dsp/arm/loopfilter_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:18.7130837Z     [CC] vpx_dsp/arm/highbd_loopfilter_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:18.8130796Z     [CC] vpx_dsp/fwd_txfm.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:18.9391289Z     [CC] vpx_dsp/arm/fdct4x4_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:19.0870807Z     [CC] vpx_dsp/arm/fdct8x8_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:19.1020659Z     [CC] vpx_dsp/arm/fdct16x16_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:19.2790569Z     [CC] vpx_dsp/arm/fdct32x32_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:19.3588620Z     [CC] vpx_dsp/arm/fdct_partial_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:19.5070840Z     [CC] vpx_dsp/inv_txfm.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:19.5171177Z     [CC] vpx_dsp/arm/highbd_idct4x4_add_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:19.6723325Z     [CC] vpx_dsp/arm/highbd_idct8x8_add_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:19.9120847Z     [CC] vpx_dsp/arm/highbd_idct16x16_add_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:20.1891373Z     [CC] vpx_dsp/arm/highbd_idct32x32_add_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:20.2690702Z     [CC] vpx_dsp/arm/highbd_idct32x32_34_add_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:20.3259218Z     [CC] vpx_dsp/arm/highbd_idct32x32_135_add_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:20.3282832Z     [CC] vpx_dsp/arm/highbd_idct32x32_1024_add_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:20.5814284Z     [CC] vpx_dsp/arm/idct4x4_1_add_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:20.6892261Z     [CC] vpx_dsp/arm/idct4x4_add_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:20.7550617Z     [CC] vpx_dsp/arm/idct8x8_1_add_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:20.7900880Z     [CC] vpx_dsp/arm/idct8x8_add_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:20.8265599Z     [CC] vpx_dsp/arm/idct16x16_1_add_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:20.8681519Z     [CC] vpx_dsp/arm/idct16x16_add_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:20.8900767Z     [CC] vpx_dsp/arm/idct32x32_1_add_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:20.9410730Z     [CC] vpx_dsp/arm/idct32x32_34_add_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:20.9785561Z     [CC] vpx_dsp/arm/idct32x32_135_add_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:21.0850634Z     [CC] vpx_dsp/arm/idct32x32_add_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:21.1070648Z     [CC] vpx_dsp/quantize.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:21.1690000Z     [CC] vpx_dsp/arm/quantize_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:21.2020846Z     [CC] vpx_dsp/arm/highbd_quantize_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:21.2270899Z     [CC] vpx_dsp/avg.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:21.3150678Z     [CC] vpx_dsp/arm/avg_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:21.3520741Z     [CC] vpx_dsp/arm/hadamard_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:21.3574338Z     [CC] vpx_dsp/arm/highbd_hadamard_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:21.4734845Z     [CC] vpx_dsp/arm/highbd_avg_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:21.5104298Z     [CC] vpx_dsp/skin_detection.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:21.5180931Z     [CC] vpx_dsp/sad.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:21.5482890Z     [CC] vpx_dsp/subtract.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:21.5921042Z     [CC] vpx_dsp/sum_squares.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:21.6073479Z     [CC] vpx_dsp/arm/sum_squares_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:21.6253172Z     [CC] vpx_dsp/arm/sad4d_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:21.6360846Z     [CC] vpx_dsp/arm/sad4d_neon_dotprod.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:21.7440794Z     [CC] vpx_dsp/arm/sad_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:21.8290834Z     [CC] vpx_dsp/arm/sad_neon_dotprod.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:21.8802387Z     [CC] vpx_dsp/arm/subtract_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:22.0080916Z     [CC] vpx_dsp/arm/highbd_sad4d_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:22.0140446Z     [CC] vpx_dsp/arm/highbd_sad_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:22.0910518Z     [CC] vpx_dsp/variance.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:22.2760633Z     [CC] vpx_dsp/arm/avg_pred_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:22.2815552Z     [CC] vpx_dsp/arm/subpel_variance_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:22.4099320Z     [CC] vpx_dsp/arm/variance_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:22.4330957Z     [CC] vpx_dsp/arm/variance_neon_dotprod.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:22.6021651Z     [CC] vpx_dsp/arm/highbd_avg_pred_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:22.6561303Z     [CC] vpx_dsp/arm/highbd_sse_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:22.7170729Z     [CC] vpx_dsp/arm/highbd_variance_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:22.8002009Z     [CC] vpx_dsp/arm/highbd_subpel_variance_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:23.0580838Z     [CC] vpx_dsp/vpx_dsp_rtcd.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:23.1290646Z     [CC] vpx_util/vpx_thread.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:23.1800774Z     [CC] vpx_util/vpx_write_yuv_frame.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:23.2161811Z     [CC] vp8/common/alloccommon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:23.2641278Z     [CC] vp8/common/blockd.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:23.2970898Z     [CC] vp8/common/dequantize.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:23.3390826Z     [CC] vp8/common/entropy.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:23.3781780Z     [CC] vp8/common/entropymode.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:23.3800409Z     [CC] vp8/common/entropymv.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:23.4040787Z     [CC] vp8/common/extend.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:23.4171172Z     [CC] vp8/common/filter.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:23.4790937Z     [CC] vp8/common/findnearmv.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:23.5330981Z     [CC] vp8/common/generic/systemdependent.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:23.5720687Z     [CC] vp8/common/idct_blk.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:23.6110899Z     [CC] vp8/common/idctllm.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:23.6170792Z     [CC] vp8/common/rtcd.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:23.6470748Z     [CC] vp8/common/vp8_loopfilter.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:23.6640839Z     [CC] vp8/common/loopfilter_filters.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:23.7730733Z     [CC] vp8/common/mbpitch.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:23.8240705Z     [CC] vp8/common/modecont.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:23.8560740Z     [CC] vp8/common/quant_common.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:23.8940677Z     [CC] vp8/common/reconinter.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:23.8980506Z     [CC] vp8/common/reconintra.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:23.9550856Z     [CC] vp8/common/reconintra4x4.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:24.0050729Z     [CC] vp8/common/setupintrarecon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:24.0431068Z     [CC] vp8/common/swapyv12buffer.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:24.0737787Z     [CC] vp8/common/treecoder.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:24.0751783Z     [CC] vp8/common/arm/loopfilter_arm.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:24.1100975Z     [CC] vp8/common/arm/neon/bilinearpredict_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:24.1410731Z     [CC] vp8/common/arm/neon/copymem_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:24.2550549Z     [CC] vp8/common/arm/neon/dc_only_idct_add_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:24.2920672Z     [CC] vp8/common/arm/neon/dequant_idct_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:24.3600695Z     [CC] vp8/common/arm/neon/dequantizeb_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:24.4020710Z     [CC] vp8/common/arm/neon/idct_blk_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:24.4700753Z     [CC] vp8/common/arm/neon/iwalsh_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:24.5570924Z     [CC] vp8/common/arm/neon/vp8_loopfilter_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:24.6081049Z     [CC] vp8/common/arm/neon/loopfiltersimplehorizontaledge_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:24.6990848Z     [CC] vp8/common/arm/neon/loopfiltersimpleverticaledge_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:24.7170673Z     [CC] vp8/common/arm/neon/mbloopfilter_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:24.8340824Z     [CC] vp8/common/arm/neon/shortidct4x4llm_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:24.8690689Z     [CC] vp8/common/arm/neon/sixtappredict_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:24.9410664Z     [CC] vp8/vp8_cx_iface.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:25.1000805Z     [CC] vp8/encoder/bitstream.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:25.1291161Z     [CC] vp8/encoder/boolhuff.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:25.1720657Z     [CC] vp8/encoder/copy_c.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:25.2090657Z     [CC] vp8/encoder/dct.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:25.2710589Z     [CC] vp8/encoder/encodeframe.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:25.5140838Z     [CC] vp8/encoder/encodeintra.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:25.5460843Z     [CC] vp8/encoder/encodemb.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:25.5910689Z     [CC] vp8/encoder/encodemv.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:25.6890806Z     [CC] vp8/encoder/ethreading.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:25.6930216Z     [CC] vp8/encoder/firstpass.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:25.7870772Z     [CC] vp8/encoder/denoising.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:25.8340854Z     [CC] vp8/encoder/lookahead.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:25.8940751Z     [CC] vp8/encoder/mcomp.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:25.9269983Z     [CC] vp8/encoder/modecosts.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:25.9799967Z     [CC] vp8/encoder/onyx_if.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:26.1210863Z     [CC] vp8/encoder/pickinter.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:26.1950824Z     [CC] vp8/encoder/picklpf.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:26.2890727Z     [CC] vp8/encoder/vp8_quantize.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:26.3400670Z     [CC] vp8/encoder/ratectrl.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:26.4680714Z     [CC] vp8/encoder/rdopt.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:26.4890934Z     [CC] vp8/encoder/segmentation.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:26.5450873Z     [CC] vp8/common/vp8_skin_detection.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:26.6030667Z     [CC] vp8/encoder/tokenize.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:26.6764161Z     [CC] vp8/encoder/treewriter.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:26.7149957Z     [CC] vp8/encoder/temporal_filter.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:26.7361626Z     [CC] vp8/encoder/arm/neon/denoising_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:26.8890726Z     [CC] vp8/encoder/arm/neon/fastquantizeb_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:26.9000932Z     [CC] vp8/encoder/arm/neon/shortfdct_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:26.9941379Z     [CC] vp8/encoder/arm/neon/vp8_shortwalsh4x4_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:27.0109974Z     [CC] vp8/vp8_dx_iface.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:27.0640712Z     [CC] vp8/decoder/dboolhuff.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:27.1067197Z     [CC] vp8/decoder/decodemv.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:27.1090379Z     [CC] vp8/decoder/decodeframe.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:27.1260671Z     [CC] vp8/decoder/detokenize.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:27.2070682Z     [CC] vp8/decoder/onyxd_if.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:27.3001080Z     [CC] vp8/decoder/threading.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:27.4444824Z     [CC] vp9/vp9_iface_common.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:27.4480809Z     [CC] vp9/common/vp9_alloccommon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:27.4874793Z     [CC] vp9/common/vp9_blockd.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:27.4964754Z     [CC] vp9/common/vp9_entropy.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:27.5103551Z     [CC] vp9/common/vp9_entropymode.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:27.5610664Z     [CC] vp9/common/vp9_entropymv.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:27.6259567Z     [CC] vp9/common/vp9_frame_buffers.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:27.6417850Z     [CC] vp9/common/vp9_idct.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:27.6700725Z     [CC] vp9/common/vp9_filter.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:27.6845539Z     [CC] vp9/common/vp9_pred_common.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:27.6990797Z     [CC] vp9/common/vp9_rtcd.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:27.7360854Z     [CC] vp9/common/vp9_scale.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:27.7588988Z     [CC] vp9/common/vp9_seg_common.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:27.7770867Z     [CC] vp9/common/vp9_tile_common.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:27.7885405Z     [CC] vp9/common/vp9_loopfilter.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:27.8005208Z     [CC] vp9/common/vp9_thread_common.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:27.8262801Z     [CC] vp9/common/vp9_mvref_common.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:27.9436402Z     [CC] vp9/common/vp9_quant_common.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:27.9850840Z     [CC] vp9/common/vp9_reconinter.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:28.0400852Z     [CC] vp9/common/vp9_reconintra.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:28.0812256Z     [CC] vp9/common/vp9_common_data.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:28.0967892Z     [CC] vp9/common/vp9_scan.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:28.1092238Z     [CC] vp9/common/arm/neon/vp9_iht4x4_add_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:28.1431074Z     [CC] vp9/common/arm/neon/vp9_iht8x8_add_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:28.1986168Z     [CC] vp9/common/arm/neon/vp9_iht16x16_add_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:28.2614736Z     [CC] vp9/common/arm/neon/vp9_highbd_iht4x4_add_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:28.3349633Z     [CC] vp9/common/arm/neon/vp9_highbd_iht8x8_add_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:28.3849446Z     [CC] vp9/common/arm/neon/vp9_highbd_iht16x16_add_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:28.4510798Z     [CC] vp9/vp9_cx_iface.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:28.4720354Z     [CC] vp9/encoder/vp9_bitstream.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:28.5501385Z vp9/encoder/vp9_bitstream.c:1031:37: warning: implicit conversion loses integer precision: 'size_t' (aka 'unsigned long') to 'int' [-Wshorten-64-to-32]
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:28.5503050Z  1031 |         data->dest_size = data_size - offset;
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:28.5530401Z       |                         ~ ~~~~~~~~~~^~~~~~~~
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:28.6700877Z     [CC] vp9/encoder/vp9_context_tree.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:28.6810930Z     [CC] vp9/encoder/vp9_cost.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:28.7174923Z     [CC] vp9/encoder/vp9_dct.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:28.7710735Z     [CC] vp9/encoder/vp9_encodeframe.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:28.8520912Z     [CC] vp9/encoder/vp9_encodemb.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:28.8761163Z     [CC] vp9/encoder/vp9_encodemv.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:29.0610833Z     [CC] vp9/encoder/vp9_ethread.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:29.0640516Z     [CC] vp9/encoder/vp9_extend.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:29.1650390Z     [CC] vp9/encoder/vp9_firstpass.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:29.2338550Z 1 warning generated.
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:29.2371557Z     [CC] vp9/encoder/vp9_frame_scale.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:29.2751128Z     [CC] vp9/encoder/vp9_lookahead.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:29.3240706Z     [CC] vp9/encoder/vp9_multi_thread.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:29.3550885Z     [CC] vp9/encoder/vp9_mcomp.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:29.4420906Z     [CC] vp9/encoder/vp9_encoder.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:29.8204656Z     [CC] vp9/encoder/vp9_picklpf.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:29.9120835Z     [CC] vp9/encoder/vp9_quantize.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:30.0440715Z     [CC] vp9/encoder/vp9_ratectrl.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:30.4480884Z     [CC] vp9/encoder/vp9_rd.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:30.6630666Z     [CC] vp9/encoder/vp9_rdopt.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:30.7170749Z     [CC] vp9/encoder/vp9_pickmode.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:30.9740952Z     [CC] vp9/encoder/vp9_segmentation.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:31.1000712Z     [CC] vp9/encoder/vp9_speed_features.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:31.3190634Z     [CC] vp9/encoder/vp9_subexp.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:31.4249198Z     [CC] vp9/encoder/vp9_svc_layercontext.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:31.4820697Z     [CC] vp9/encoder/vp9_resize.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:31.7130964Z     [CC] vp9/encoder/vp9_tokenize.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:31.7583532Z     [CC] vp9/encoder/vp9_treewriter.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:31.7970891Z     [CC] vp9/encoder/vp9_aq_variance.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:31.8161047Z     [CC] vp9/encoder/vp9_aq_360.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:31.8854328Z     [CC] vp9/encoder/vp9_aq_cyclicrefresh.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:31.8870439Z     [CC] vp9/encoder/vp9_aq_complexity.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:31.9170991Z     [CC] vp9/encoder/vp9_alt_ref_aq.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:31.9740757Z     [CC] vp9/encoder/vp9_skin_detection.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:31.9830648Z     [CC] vp9/encoder/vp9_noise_estimate.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:32.0461869Z     [CC] vp9/encoder/vp9_ext_ratectrl.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:32.0767768Z     [CC] vp9/encoder/vp9_temporal_filter.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:32.0870691Z     [CC] vp9/encoder/vp9_tpl_model.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:32.1431013Z     [CC] vp9/encoder/vp9_mbgraph.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:32.2020785Z     [CC] vp9/encoder/arm/neon/vp9_temporal_filter_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:32.2703828Z     [CC] vp9/encoder/arm/neon/vp9_diamond_search_sad_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:32.3393895Z     [CC] vp9/encoder/arm/neon/vp9_highbd_temporal_filter_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:32.3850940Z     [CC] vp9/encoder/arm/neon/vp9_dct_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:32.4282231Z     [CC] vp9/encoder/arm/neon/vp9_error_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:32.4289094Z     [CC] vp9/encoder/arm/neon/vp9_frame_scale_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:32.5622061Z     [CC] vp9/encoder/arm/neon/vp9_quantize_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:32.5760773Z     [CC] vp9/encoder/arm/neon/vp9_highbd_error_neon.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:32.6870996Z     [CC] vp9/vp9_dx_iface.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:32.7569966Z     [CC] vp9/decoder/vp9_decodemv.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:32.7600586Z     [CC] vp9/decoder/vp9_decodeframe.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:32.7990776Z     [CC] vp9/decoder/vp9_detokenize.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:32.9320706Z     [CC] vp9/decoder/vp9_decoder.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:33.0641655Z     [CC] vp9/decoder/vp9_dsubexp.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:33.1400838Z     [CC] vp9/decoder/vp9_job_queue.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:33.1630646Z     [CC] vpx_config.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:33.1684542Z     [CREATE] vpx.pc
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:33.1797609Z     [CXX] vp9/ratectrl_rtc.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:33.1840537Z     [CXX] vp8/vp8_ratectrl_rtc.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:33.1941359Z     [CXX] third_party/googletest/src/src/gtest-all.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:33.4780872Z     [CC] ivfenc.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:33.4897845Z     [CC] md5_utils.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:33.5295694Z     [CXX] test/active_map_refresh_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:33.5320944Z     [CXX] test/active_map_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:33.5580709Z     [CXX] test/alt_ref_aq_segment_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:35.4820934Z     [CXX] test/altref_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:35.5330904Z     [CXX] test/aq_segment_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:35.5391862Z     [CXX] test/avg_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:37.4920632Z     [CXX] test/bench.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:37.7730839Z     [CXX] test/borders_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:37.9170827Z     [CXX] test/byte_alignment_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:39.5820846Z     [CXX] test/comp_avg_pred_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:39.5911061Z     [CXX] test/config_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:39.6251163Z     [CXX] test/convolve_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:39.8980921Z     [CXX] test/cpu_speed_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:41.3426394Z     [CXX] test/cq_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:41.9024864Z     [CXX] test/dct16x16_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:41.9039339Z     [CXX] test/dct32x32_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:41.9371670Z     [CXX] test/dct_partial_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:43.2590897Z     [CXX] test/dct_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:43.7253884Z     [CXX] test/decode_api_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:43.9922415Z     [CXX] test/decode_corrupted.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:44.5774594Z     [CXX] test/decode_svc_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:45.0248078Z     [CXX] test/decode_test_driver.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:45.6616570Z     [CXX] test/encode_api_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:46.0181404Z     [CXX] test/encode_test_driver.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:46.4830999Z     [CXX] test/error_resilience_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:46.5604889Z     [CXX] test/external_frame_buffer_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:47.1471012Z     [CXX] test/fdct8x8_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:48.1330283Z     [CXX] test/frame_size_tests.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:48.9230954Z     [CXX] test/hadamard_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:49.1500920Z     [CXX] test/idct8x8_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:49.3090423Z     [CXX] test/idct_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:49.5497338Z     [CXX] test/init_vpx_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:50.2551493Z     [CXX] test/invalid_file_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:50.4379125Z     [CXX] test/keyframe_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:50.9141262Z     [CXX] test/level_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:51.2390972Z     [CXX] test/lpf_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:52.6270754Z     [CXX] test/minmax_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:52.8260753Z     [CXX] test/partial_idct_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:53.0900847Z     [CXX] test/predict_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:53.3925345Z     [CXX] test/quantize_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:54.3341287Z     [CXX] test/realtime_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:54.7700949Z     [CXX] test/resize_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:54.9620967Z     [CXX] test/sad_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:55.1001033Z     [CXX] test/set_roi.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:56.1262044Z     [CXX] test/sum_squares_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:56.1991020Z     [CXX] test/superframe_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:58.2620951Z     [CXX] test/svc_datarate_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:58.3058788Z     [CXX] test/svc_end_to_end_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:58.3920973Z     [CXX] test/svc_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:59.3681270Z     [CXX] test/test_libvpx.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:35:59.4141479Z     [CXX] test/test_vector_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:00.1950885Z     [CXX] test/test_vectors.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:00.2239459Z     [CXX] test/tile_independence_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:01.1851274Z     [CXX] test/timestamp_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:01.9290680Z     [CXX] test/user_priv_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:02.0500979Z     [CXX] test/variance_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:02.9900913Z     [CXX] test/vp8_boolcoder_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:03.0511060Z     [CXX] test/vp8_datarate_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:03.2420929Z     [CXX] test/vp8_decrypt_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:03.9473155Z     [CXX] test/vp8_fdct4x4_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:04.3730877Z     [CXX] test/vp8_fragments_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:05.4060678Z     [CXX] test/vp9_arf_freq_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:05.5050919Z     [CXX] test/vp9_block_error_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:05.8014017Z     [CXX] test/vp9_boolcoder_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:06.8301004Z     [CXX] test/vp9_datarate_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:07.0260855Z     [CXX] test/vp9_decrypt_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:07.2501105Z     [CXX] test/vp9_encoder_parms_get_to_decoder.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:07.6530912Z     [CXX] test/vp9_end_to_end_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:08.1920591Z     [CXX] test/vp9_ethread_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:09.3511079Z     [CXX] test/vp9_ext_ratectrl_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:11.0360850Z     [CXX] test/vp9_intrapred_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:11.3098408Z     [CXX] test/vp9_lossless_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:11.4982870Z     [CXX] test/vp9_motion_vector_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:11.5333179Z     [CXX] test/vp9_quantize_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:13.2570908Z     [CXX] test/vp9_roi_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:13.4111274Z     [CXX] test/vp9_scale_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:13.4530964Z     [CXX] test/vp9_skip_loopfilter_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:13.5010946Z     [CXX] test/vp9_subtract_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:14.3743958Z     [CXX] test/vp9_thread_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:14.7190866Z     [CXX] test/vpx_image_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:14.9480730Z     [CXX] test/vpx_scale_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:15.7440745Z     [CXX] test/y4m_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:15.9800924Z     [CXX] test/yuv_temporal_filter_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:16.6110807Z     [CXX] third_party/libwebm/mkvparser/mkvparser.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:16.9100877Z     [CXX] third_party/libwebm/mkvparser/mkvreader.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:16.9650908Z     [CXX] webmdec.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:17.0420878Z     [CC] y4menc.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:17.0800987Z     [CC] y4minput.c.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:17.3330964Z     [CXX] test/test_intra_pred_speed.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:17.7882285Z     [CXX] test/test_rc_interface.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:18.2154772Z     [CXX] test/vp8_ratectrl_rtc_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:18.4930848Z     [CXX] test/vp9_ratectrl_rtc_test.cc.o
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:18.6490891Z     [AR] libvpx_g.a
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:18.6640718Z     [AR] libvpxrc_g.a
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:18.6718641Z     [AR] libgtest_g.a
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:18.6790729Z     [STRIP] libvpx.a < libvpx_g.a
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:18.7300877Z     [STRIP] libvpxrc.a < libvpxrc_g.a
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:18.7420622Z     [STRIP] libgtest.a < libgtest_g.a
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:18.7550662Z     [LD] test_intra_pred_speed
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:19.0701137Z     [LD] test_libvpx
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:20.6045366Z     [LD] test_rc_interface
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:20.8158959Z     [INSTALL] /home/runner/work/Artcraft-android32/Artcraft-android32/source/picassosuite/ffmpeg-deps/include/vpx/vp8.h
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:20.8200846Z     [INSTALL] /home/runner/work/Artcraft-android32/Artcraft-android32/source/picassosuite/ffmpeg-deps/include/vpx/vp8cx.h
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:20.8240754Z     [INSTALL] /home/runner/work/Artcraft-android32/Artcraft-android32/source/picassosuite/ffmpeg-deps/include/vpx/vpx_ext_ratectrl.h
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:20.8280722Z     [INSTALL] /home/runner/work/Artcraft-android32/Artcraft-android32/source/picassosuite/ffmpeg-deps/include/vpx/vp8dx.h
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:20.8320389Z     [INSTALL] /home/runner/work/Artcraft-android32/Artcraft-android32/source/picassosuite/ffmpeg-deps/include/vpx/vpx_codec.h
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:20.8359591Z     [INSTALL] /home/runner/work/Artcraft-android32/Artcraft-android32/source/picassosuite/ffmpeg-deps/include/vpx/vpx_frame_buffer.h
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:20.8400232Z     [INSTALL] /home/runner/work/Artcraft-android32/Artcraft-android32/source/picassosuite/ffmpeg-deps/include/vpx/vpx_image.h
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:20.8439127Z     [INSTALL] /home/runner/work/Artcraft-android32/Artcraft-android32/source/picassosuite/ffmpeg-deps/include/vpx/vpx_integer.h
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:20.8478918Z     [INSTALL] /home/runner/work/Artcraft-android32/Artcraft-android32/source/picassosuite/ffmpeg-deps/include/vpx/vpx_decoder.h
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:20.8518551Z     [INSTALL] /home/runner/work/Artcraft-android32/Artcraft-android32/source/picassosuite/ffmpeg-deps/include/vpx/vpx_encoder.h
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:20.8558552Z     [INSTALL] /home/runner/work/Artcraft-android32/Artcraft-android32/source/picassosuite/ffmpeg-deps/include/vpx/vpx_tpl.h
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:20.8597728Z     [INSTALL] /home/runner/work/Artcraft-android32/Artcraft-android32/source/picassosuite/ffmpeg-deps/lib/libvpx.a
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:20.8647041Z     [INSTALL] /home/runner/work/Artcraft-android32/Artcraft-android32/source/picassosuite/ffmpeg-deps/lib/pkgconfig/vpx.pc
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:20.9102240Z Updated ffmpeg-next features with build and encoder features
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:21.1114240Z   Icon: assets/icon.png (adaptive layers + density mipmaps)
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:21.1545858Z Installed Picasso Suite adapter in /home/runner/work/Artcraft-android32/Artcraft-android32/source/picassosuite/apps/picassosuite-android
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:21.1806586Z   -> installed the update checker (builder version 0.6.0)
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:21.1866187Z Vendoring the Android-compatible egui-winit for PicassoSuite (system clipboard via JNI)...
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:21.2267264Z Vendoring an Android-compatible rfd for PicassoSuite (native file dialogs become no-ops)...
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:21.2898886Z Vendoring the mouse/scroll-aware winit for PicassoSuite...
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:21.3240429Z   Synced winit IME-reset support with fork egui-winit
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:21.3836303Z Vendoring the surface-fixing egui-wgpu for PicassoSuite...
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:21.4172357Z Vendoring the ANR-safe android-activity glue for PicassoSuite...
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:21.5431240Z 
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:21.5431961Z [5] Preparing a builder-owned signing key...
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:26.1286166Z Generating 2,048 bit RSA key pair and self-signed certificate (SHA384withRSA) with a validity of 10,000 days
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:26.1287048Z 	for: CN=ArtCraft Android Builder, OU=Local Builds, O=ArtCraft, C=US
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:26.1410518Z [Storing keys/artcraft-builder.jks]
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:26.6070869Z 
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:26.6071451Z Warning:
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:26.6072728Z The JKS keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore keys/artcraft-builder.jks -destkeystore keys/artcraft-builder.jks -deststoretype pkcs12".
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:26.6784127Z   Added egui-wgpu to [workspace.dependencies]
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:26.6785062Z   Added egui-winit to [workspace.dependencies]
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:26.6785663Z   Added winit to [workspace.dependencies]
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:26.7011417Z   Emptied wayland features in vendor/winit/Cargo.toml (fontconfig links conflict)
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:26.7041365Z 
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:26.7041637Z [6] Building PicassoSuite (release)...
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:26.7410917Z Fetching craft-fonts (the shared faces the apps embed)...
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:26.7424771Z Cloning into '/home/runner/work/Artcraft-android32/Artcraft-android32/source/craft-fonts'...
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:28.3863371Z   -> embedding the craft-fonts faces (21 of them)
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:28.3863997Z Fetching craft-i18n (the shared translations the apps embed)...
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:28.3877571Z Cloning into '/home/runner/work/Artcraft-android32/Artcraft-android32/source/craft-i18n'...
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.0962876Z   -> embedding the craft-i18n catalogs
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.0963525Z   -> generating AndroidManifest.xml, the theme resource and the Gradle project
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2342122Z   -> pre-fetching Cargo dependencies
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2471510Z ^[[1m^[[33mwarning^[[0m: unused config key `build.env` in `/home/runner/work/Artcraft-android32/Artcraft-android32/source/picassosuite/.cargo/config.toml`
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2493924Z ^[[1m^[[33mwarning^[[0m^[[1m: unused workspace dependency `egui-wgpu`^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2494305Z   ^[[1m^[[94m--> ^[[0mCargo.toml:15:1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2494606Z    ^[[1m^[[94m|^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2494968Z ^[[1m^[[94m15^[[0m ^[[1m^[[94m|^[[0m egui-wgpu = { path = "vendor/egui-wgpu" }
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2495335Z    ^[[1m^[[94m|^[[0m ^[[1m^[[33m^^^^^^^^^^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2495579Z    ^[[1m^[[94m|^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2497728Z    ^[[1m^[[94m= ^[[0m^[[1mnote^[[0m: `cargo::unused_workspace_dependencies` is set to `warn` by default
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2498515Z ^[[1m^[[96mhelp^[[0m: consider removing the workspace dependency `egui-wgpu`
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2499188Z ^[[1m^[[33mwarning^[[0m^[[1m: unused workspace dependency `egui-winit`^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2499537Z   ^[[1m^[[94m--> ^[[0mCargo.toml:14:1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2499980Z    ^[[1m^[[94m|^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2500291Z ^[[1m^[[94m14^[[0m ^[[1m^[[94m|^[[0m egui-winit = { path = "vendor/egui-winit" }
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2500644Z    ^[[1m^[[94m|^[[0m ^[[1m^[[33m^^^^^^^^^^^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2500906Z    ^[[1m^[[94m|^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2501213Z ^[[1m^[[96mhelp^[[0m: consider removing the workspace dependency `egui-winit`
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2501628Z ^[[1m^[[33mwarning^[[0m^[[1m: unused workspace dependency `winit`^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2501947Z   ^[[1m^[[94m--> ^[[0mCargo.toml:13:1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2502190Z    ^[[1m^[[94m|^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2502469Z ^[[1m^[[94m13^[[0m ^[[1m^[[94m|^[[0m winit = { path = "vendor/winit" }
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2502767Z    ^[[1m^[[94m|^[[0m ^[[1m^[[33m^^^^^^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2503014Z    ^[[1m^[[94m|^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2503306Z ^[[1m^[[96mhelp^[[0m: consider removing the workspace dependency `winit`
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2503693Z ^[[1m^[[33mwarning^[[0m: workspace (manifest) generated 3 warnings
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2504100Z ^[[1m^[[33mwarning^[[0m^[[1m: missing `[lints]` to inherit `[workspace.lints]`^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2504485Z   ^[[1m^[[94m--> ^[[0mapps/picassosuite-android/Cargo.toml
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2504950Z    ^[[1m^[[94m= ^[[0m^[[1mnote^[[0m: `cargo::missing_lints_inheritance` is set to `warn` by default
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2505358Z ^[[1m^[[96mhelp^[[0m: to inherit `workspace.lints, add:
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2505625Z    ^[[1m^[[94m|^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2505893Z ^[[1m^[[94m67^[[0m ^[[92m~ ^[[0mvalue = "picassosuite_android"
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2506190Z ^[[1m^[[94m68^[[0m ^[[92m+ [lints]^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2506466Z ^[[1m^[[94m69^[[0m ^[[92m+ workspace = true^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2506722Z    ^[[1m^[[94m|^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2506994Z ^[[1m^[[96mhelp^[[0m: to clarify your intent to not inherit, add:
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2507287Z    ^[[1m^[[94m|^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2507533Z ^[[1m^[[94m67^[[0m ^[[92m~ ^[[0mvalue = "picassosuite_android"
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2507821Z ^[[1m^[[94m68^[[0m ^[[92m+ [lints]^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2508048Z    ^[[1m^[[94m|^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2508358Z ^[[1m^[[33mwarning^[[0m: `picassosuite-android` (manifest) generated 1 warning
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.2581085Z ^[[1m^[[92m    Updating^[[0m crates.io index
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.7407871Z ^[[1m^[[92m     Locking^[[0m 30 packages to highest Rust 1.95 compatible versions
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.7409006Z ^[[1m^[[92m      Adding^[[0m android-activity v0.6.1 (/home/runner/work/Artcraft-android32/Artcraft-android32/source/picassosuite/vendor/android-activity)
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.7410009Z ^[[1m^[[92m      Adding^[[0m android_log-sys v0.3.2
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.7410774Z ^[[1m^[[92m      Adding^[[0m android_logger v0.15.1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.7413058Z ^[[1m^[[92m      Adding^[[0m displaydoc v0.2.7
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.7413884Z ^[[1m^[[92m      Adding^[[0m egui-wgpu v0.36.2 (/home/runner/work/Artcraft-android32/Artcraft-android32/source/picassosuite/vendor/egui-wgpu)
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.7415306Z ^[[1m^[[92m      Adding^[[0m egui-winit v0.36.2 (/home/runner/work/Artcraft-android32/Artcraft-android32/source/picassosuite/vendor/egui-winit)
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.7417409Z ^[[1m^[[92m      Adding^[[0m env_filter v0.1.4
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.7418095Z ^[[1m^[[92m      Adding^[[0m ffmpeg-sys-next v7.1.3 (/home/runner/work/Artcraft-android32/Artcraft-android32/source/picassosuite/vendor/ffmpeg-sys-next)
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.7418690Z ^[[1m^[[92m      Adding^[[0m form_urlencoded v1.2.2
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.7420226Z ^[[1m^[[92m      Adding^[[0m icu_collections v2.4.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.7422950Z ^[[1m^[[92m      Adding^[[0m icu_locale_core v2.4.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.7430217Z ^[[1m^[[92m      Adding^[[0m icu_normalizer v2.4.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.7431226Z ^[[1m^[[92m      Adding^[[0m icu_normalizer_data v2.4.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.7437138Z ^[[1m^[[92m      Adding^[[0m icu_properties v2.4.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.7437925Z ^[[1m^[[92m      Adding^[[0m icu_properties_data v2.4.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.7447261Z ^[[1m^[[92m      Adding^[[0m icu_provider v2.4.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.7449825Z ^[[1m^[[92m      Adding^[[0m idna v1.1.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.7450413Z ^[[1m^[[92m      Adding^[[0m idna_adapter v1.2.2
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.7453299Z ^[[1m^[[92m      Adding^[[0m litemap v0.8.3
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.7453954Z ^[[1m^[[92m      Adding^[[0m potential_utf v0.1.6
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.7454760Z ^[[1m^[[92m      Adding^[[0m rfd v0.17.2 (/home/runner/work/Artcraft-android32/Artcraft-android32/source/picassosuite/vendor/rfd)
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.7459469Z ^[[1m^[[92m      Adding^[[0m tinystr v0.8.5
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.7466639Z ^[[1m^[[92m      Adding^[[0m url v2.5.8
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.7467587Z ^[[1m^[[92m      Adding^[[0m utf8_iter v1.1.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.7468017Z ^[[1m^[[92m      Adding^[[0m utf_types v1.0.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.7475980Z ^[[1m^[[92m      Adding^[[0m webbrowser v1.2.7
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.7477955Z ^[[1m^[[92m      Adding^[[0m writeable v0.6.4
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.7480734Z ^[[1m^[[92m      Adding^[[0m zerotrie v0.2.5
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.7486779Z ^[[1m^[[92m      Adding^[[0m zerovec v0.11.9
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:31.7488951Z ^[[1m^[[92m      Adding^[[0m zerovec-derive v0.11.7
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.0025560Z   -> patching wgpu for Adreno Vulkan swapchain support across the suite
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.7357692Z   -> patched wgpu-hal swapchain latency in native.rs
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.7358257Z   -> patched wgpu-core clamp guard in resource.rs
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.7358789Z   -> patched wgpu-hal android_hardware_buffer extension in adapter.rs
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.7398187Z   -> building the native library with cargo-ndk (armeabi-v7a, API 28)
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.8143151Z     Building armeabi-v7a (armv7-linux-androideabi)
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.8231634Z ^[[1m^[[33mwarning^[[0m: unused config key `build.env` in `/home/runner/work/Artcraft-android32/Artcraft-android32/source/picassosuite/.cargo/config.toml`
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.8253592Z ^[[1m^[[33mwarning^[[0m^[[1m: unused workspace dependency `egui-wgpu`^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.8254202Z   ^[[1m^[[94m--> ^[[0mCargo.toml:15:1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.8254586Z    ^[[1m^[[94m|^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.8255040Z ^[[1m^[[94m15^[[0m ^[[1m^[[94m|^[[0m egui-wgpu = { path = "vendor/egui-wgpu" }
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.8255517Z    ^[[1m^[[94m|^[[0m ^[[1m^[[33m^^^^^^^^^^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.8255872Z    ^[[1m^[[94m|^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.8256611Z    ^[[1m^[[94m= ^[[0m^[[1mnote^[[0m: `cargo::unused_workspace_dependencies` is set to `warn` by default
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.8257602Z ^[[1m^[[96mhelp^[[0m: consider removing the workspace dependency `egui-wgpu`
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.8258388Z ^[[1m^[[33mwarning^[[0m^[[1m: unused workspace dependency `egui-winit`^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.8258918Z   ^[[1m^[[94m--> ^[[0mCargo.toml:14:1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.8259266Z    ^[[1m^[[94m|^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.8259803Z ^[[1m^[[94m14^[[0m ^[[1m^[[94m|^[[0m egui-winit = { path = "vendor/egui-winit" }
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.8260202Z    ^[[1m^[[94m|^[[0m ^[[1m^[[33m^^^^^^^^^^^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.8260570Z    ^[[1m^[[94m|^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.8261092Z ^[[1m^[[96mhelp^[[0m: consider removing the workspace dependency `egui-winit`
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.8261509Z ^[[1m^[[33mwarning^[[0m^[[1m: unused workspace dependency `winit`^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.8261837Z   ^[[1m^[[94m--> ^[[0mCargo.toml:13:1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.8262081Z    ^[[1m^[[94m|^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.8262356Z ^[[1m^[[94m13^[[0m ^[[1m^[[94m|^[[0m winit = { path = "vendor/winit" }
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.8262664Z    ^[[1m^[[94m|^[[0m ^[[1m^[[33m^^^^^^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.8262909Z    ^[[1m^[[94m|^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.8263199Z ^[[1m^[[96mhelp^[[0m: consider removing the workspace dependency `winit`
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.8263580Z ^[[1m^[[33mwarning^[[0m: workspace (manifest) generated 3 warnings
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.8263993Z ^[[1m^[[33mwarning^[[0m^[[1m: missing `[lints]` to inherit `[workspace.lints]`^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.8264371Z   ^[[1m^[[94m--> ^[[0mapps/picassosuite-android/Cargo.toml
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.8264860Z    ^[[1m^[[94m= ^[[0m^[[1mnote^[[0m: `cargo::missing_lints_inheritance` is set to `warn` by default
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.8265289Z ^[[1m^[[96mhelp^[[0m: to inherit `workspace.lints, add:
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.8265575Z    ^[[1m^[[94m|^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.8265848Z ^[[1m^[[94m67^[[0m ^[[92m~ ^[[0mvalue = "picassosuite_android"
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.8266141Z ^[[1m^[[94m68^[[0m ^[[92m+ [lints]^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.8266411Z ^[[1m^[[94m69^[[0m ^[[92m+ workspace = true^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.8266663Z    ^[[1m^[[94m|^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.8266942Z ^[[1m^[[96mhelp^[[0m: to clarify your intent to not inherit, add:
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.8267239Z    ^[[1m^[[94m|^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.8267486Z ^[[1m^[[94m67^[[0m ^[[92m~ ^[[0mvalue = "picassosuite_android"
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.8267761Z ^[[1m^[[94m68^[[0m ^[[92m+ [lints]^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.8267996Z    ^[[1m^[[94m|^[[0m
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:34.8268300Z ^[[1m^[[33mwarning^[[0m: `picassosuite-android` (manifest) generated 1 warning
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:35.0261743Z ^[[1m^[[92m   Compiling^[[0m proc-macro2 v1.0.107
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:35.0262340Z ^[[1m^[[92m   Compiling^[[0m quote v1.0.47
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:35.0263063Z ^[[1m^[[92m   Compiling^[[0m unicode-ident v1.0.27
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:35.0263408Z ^[[1m^[[92m   Compiling^[[0m libc v0.2.190
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:35.1271602Z ^[[1m^[[92m   Compiling^[[0m cfg-if v1.0.5
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:35.1736055Z ^[[1m^[[92m   Compiling^[[0m autocfg v1.5.1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:35.2843620Z ^[[1m^[[92m   Compiling^[[0m libm v0.2.16
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:35.3772413Z ^[[1m^[[92m   Compiling^[[0m num-traits v0.2.19
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:35.4161081Z ^[[1m^[[92m   Compiling^[[0m once_cell v1.21.4
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:35.6042964Z ^[[1m^[[92m   Compiling^[[0m bitflags v2.13.2
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:35.8962520Z ^[[1m^[[92m   Compiling^[[0m thiserror v2.0.21
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:35.9790924Z ^[[1m^[[92m   Compiling^[[0m zerocopy v0.8.63
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:36.1271528Z ^[[1m^[[92m   Compiling^[[0m memchr v2.8.3
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:36.1688210Z ^[[1m^[[92m   Compiling^[[0m version_check v0.9.5
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:36.2002451Z ^[[1m^[[92m   Compiling^[[0m syn v3.0.9
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:36.3735384Z ^[[1m^[[92m   Compiling^[[0m syn v2.0.119
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:36.6621364Z ^[[1m^[[92m   Compiling^[[0m foldhash v0.2.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:36.8531120Z ^[[1m^[[92m   Compiling^[[0m log v0.4.34
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:37.0513097Z ^[[1m^[[92m   Compiling^[[0m serde_core v1.0.229
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:37.1768554Z ^[[1m^[[92m   Compiling^[[0m getrandom v0.3.4
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:38.9472336Z ^[[1m^[[92m   Compiling^[[0m bytemuck_derive v1.12.1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:38.9741677Z ^[[1m^[[92m   Compiling^[[0m thiserror-impl v2.0.21
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:39.9851527Z ^[[1m^[[92m   Compiling^[[0m bytemuck v1.25.2
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:40.0081372Z ^[[1m^[[92m   Compiling^[[0m zerocopy-derive v0.8.63
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:40.0446041Z ^[[1m^[[92m   Compiling^[[0m hashbrown v0.17.1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:40.2175169Z ^[[1m^[[92m   Compiling^[[0m rand_core v0.9.5
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:40.2378489Z ^[[1m^[[92m   Compiling^[[0m synstructure v0.14.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:40.4212372Z ^[[1m^[[92m   Compiling^[[0m smallvec v1.16.3
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:40.6431883Z ^[[1m^[[92m   Compiling^[[0m pkg-config v0.3.34
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:40.6592103Z ^[[1m^[[92m   Compiling^[[0m zerofrom-derive v0.1.8
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:40.7609549Z ^[[1m^[[92m   Compiling^[[0m jobserver v0.1.35
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:40.9681049Z ^[[1m^[[92m   Compiling^[[0m shlex v2.0.1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:41.0467978Z ^[[1m^[[92m   Compiling^[[0m stable_deref_trait v1.2.1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:41.1278007Z ^[[1m^[[92m   Compiling^[[0m equivalent v1.0.3
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:41.1381825Z ^[[1m^[[92m   Compiling^[[0m find-msvc-tools v0.1.14
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:41.1510969Z ^[[1m^[[92m   Compiling^[[0m zerofrom v0.1.8
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:41.2021280Z ^[[1m^[[92m   Compiling^[[0m yoke-derive v0.8.4
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:41.2663519Z ^[[1m^[[92m   Compiling^[[0m cfg_aliases v0.2.2
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:41.3177936Z ^[[1m^[[92m   Compiling^[[0m cc v1.8.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:41.3412071Z ^[[1m^[[92m   Compiling^[[0m jni-sys-macros v0.4.1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:41.5781082Z ^[[1m^[[92m   Compiling^[[0m jni-sys v0.4.1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:41.6481141Z ^[[1m^[[92m   Compiling^[[0m yoke v0.8.4
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:41.8451081Z ^[[1m^[[92m   Compiling^[[0m indexmap v2.14.2
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:41.8998046Z ^[[1m^[[92m   Compiling^[[0m tracing-core v0.1.36
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:42.6467378Z ^[[1m^[[92m   Compiling^[[0m crossbeam-utils v0.8.23
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:42.7261274Z ^[[1m^[[92m   Compiling^[[0m either v1.19.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:42.7827932Z ^[[1m^[[92m   Compiling^[[0m serde v1.0.229
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:42.8249303Z ^[[1m^[[92m   Compiling^[[0m serde_derive v1.0.229
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:42.9198733Z ^[[1m^[[92m   Compiling^[[0m crossbeam-epoch v0.9.21
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:42.9475361Z ^[[1m^[[92m   Compiling^[[0m raw-window-handle v0.6.2
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:43.0214893Z ^[[1m^[[92m   Compiling^[[0m jni-sys v0.3.1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:43.1111129Z ^[[1m^[[92m   Compiling^[[0m arrayvec v0.7.8
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:43.3442777Z ^[[1m^[[92m   Compiling^[[0m tracing-attributes v0.1.31
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:43.7841072Z ^[[1m^[[92m   Compiling^[[0m crossbeam-deque v0.8.8
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:43.8821217Z ^[[1m^[[92m   Compiling^[[0m pin-project-lite v0.2.17
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:43.9712058Z ^[[1m^[[92m   Compiling^[[0m crc32fast v1.5.2
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:44.1841283Z ^[[1m^[[92m   Compiling^[[0m tracing v0.1.44
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:44.5306682Z ^[[1m^[[92m   Compiling^[[0m glob v0.3.4
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:44.5909540Z ^[[1m^[[92m   Compiling^[[0m semver v1.0.28
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:44.7799834Z ^[[1m^[[92m   Compiling^[[0m winnow v1.0.4
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:44.8299990Z ^[[1m^[[92m   Compiling^[[0m zmij v1.0.23
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:45.5783130Z ^[[1m^[[92m   Compiling^[[0m paste v1.0.15
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:45.6831053Z ^[[1m^[[92m   Compiling^[[0m rayon-core v1.13.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:45.8225977Z ^[[1m^[[92m   Compiling^[[0m ppv-lite86 v0.2.21
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:45.8450888Z ^[[1m^[[92m   Compiling^[[0m toml_parser v1.1.5+spec-1.1.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:45.8942392Z ^[[1m^[[92m   Compiling^[[0m rustc_version v0.4.1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:46.0683577Z ^[[1m^[[92m   Compiling^[[0m rand_chacha v0.9.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:46.0964973Z ^[[1m^[[92m   Compiling^[[0m clang-sys v1.9.1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:46.2591306Z ^[[1m^[[92m   Compiling^[[0m ndk-sys v0.6.0+11769913
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:46.5112747Z ^[[1m^[[92m   Compiling^[[0m zerovec-derive v0.11.7
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:46.5832220Z ^[[1m^[[92m   Compiling^[[0m pulp v0.22.3
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:46.7291706Z ^[[1m^[[92m   Compiling^[[0m toml_datetime v1.1.2+spec-1.1.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:46.7930967Z ^[[1m^[[92m   Compiling^[[0m rand v0.9.5
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:46.9001589Z ^[[1m^[[92m   Compiling^[[0m allocator-api2 v0.2.21
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:47.1934774Z ^[[1m^[[92m   Compiling^[[0m same-file v1.0.6
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:47.2512171Z ^[[1m^[[92m   Compiling^[[0m serde_json v1.0.154
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:47.2761568Z ^[[1m^[[92m   Compiling^[[0m hashbrown v0.16.1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:47.3169185Z ^[[1m^[[92m   Compiling^[[0m walkdir v2.5.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:47.3363982Z ^[[1m^[[92m   Compiling^[[0m zerovec v0.11.9
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:47.4630890Z ^[[1m^[[92m   Compiling^[[0m rand_distr v0.5.1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:47.5493294Z ^[[1m^[[92m   Compiling^[[0m toml_edit v0.25.17+spec-1.1.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:48.0591292Z ^[[1m^[[92m   Compiling^[[0m half v2.7.1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:48.0803125Z ^[[1m^[[92m   Compiling^[[0m jni-macros v0.22.4
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:48.5520243Z ^[[1m^[[92m   Compiling^[[0m num-complex v0.4.6
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:48.5991290Z ^[[1m^[[92m   Compiling^[[0m displaydoc v0.2.7
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:48.7964814Z ^[[1m^[[92m   Compiling^[[0m simdutf8 v0.1.5
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:48.8255464Z ^[[1m^[[92m   Compiling^[[0m parking_lot_core v0.9.12
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:48.9202189Z ^[[1m^[[92m   Compiling^[[0m itoa v1.0.18
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:49.0097829Z ^[[1m^[[92m   Compiling^[[0m reborrow v0.5.5
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:49.0964176Z ^[[1m^[[92m   Compiling^[[0m dyn-stack-macros v0.1.3
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:49.1041988Z ^[[1m^[[92m   Compiling^[[0m pulp-wasm-simd-flag v0.1.1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:49.1431517Z ^[[1m^[[92m   Compiling^[[0m regex-syntax v0.8.11
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:49.1680765Z ^[[1m^[[92m   Compiling^[[0m rustversion v1.0.23
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:49.2163532Z ^[[1m^[[92m   Compiling^[[0m minimal-lexical v0.2.1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:49.3390992Z ^[[1m^[[92m   Compiling^[[0m dyn-stack v0.13.2
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:49.5571520Z ^[[1m^[[92m   Compiling^[[0m nom v7.1.3
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:50.7857484Z ^[[1m^[[92m   Compiling^[[0m regex-automata v0.4.18
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:51.1411179Z ^[[1m^[[92m   Compiling^[[0m simd_cesu8 v1.2.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:51.1548678Z ^[[1m^[[92m   Compiling^[[0m libloading v0.8.9
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:51.1951841Z ^[[1m^[[92m   Compiling^[[0m rayon v1.12.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:51.2641259Z ^[[1m^[[92m   Compiling^[[0m proc-macro-crate v3.5.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:51.3302290Z ^[[1m^[[92m   Compiling^[[0m jni v0.22.4
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:51.4040231Z ^[[1m^[[92m   Compiling^[[0m raw-cpuid v11.6.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:51.6574201Z ^[[1m^[[92m   Compiling^[[0m simd-adler32 v0.3.10
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:51.9722389Z ^[[1m^[[92m   Compiling^[[0m thiserror v1.0.69
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:52.0913883Z ^[[1m^[[92m   Compiling^[[0m scopeguard v1.2.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:52.3082718Z ^[[1m^[[92m   Compiling^[[0m bindgen v0.70.1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:52.4091177Z ^[[1m^[[92m   Compiling^[[0m bytes v1.12.1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:52.9222555Z ^[[1m^[[92m   Compiling^[[0m seq-macro v0.3.6
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:53.1581188Z ^[[1m^[[92m   Compiling^[[0m regex v1.13.1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:53.2482337Z ^[[1m^[[92m   Compiling^[[0m combine v4.6.8
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:53.7251826Z ^[[1m^[[92m   Compiling^[[0m lock_api v0.4.14
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:53.8583906Z ^[[1m^[[92m   Compiling^[[0m gemm-common v0.19.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:53.9212133Z ^[[1m^[[92m   Compiling^[[0m itertools v0.13.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:53.9551249Z ^[[1m^[[92m   Compiling^[[0m num_enum_derive v0.7.6
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:55.1983801Z ^[[1m^[[92m   Compiling^[[0m cexpr v0.6.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:55.9977578Z ^[[1m^[[92m   Compiling^[[0m thiserror-impl v1.0.69
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:56.8981242Z ^[[1m^[[92m   Compiling^[[0m rustc-hash v1.1.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:56.9611163Z ^[[1m^[[92m   Compiling^[[0m adler2 v2.0.1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:57.0211414Z ^[[1m^[[92m   Compiling^[[0m shlex v1.3.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:57.0731199Z ^[[1m^[[92m   Compiling^[[0m num_enum v0.7.6
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:57.1381055Z ^[[1m^[[92m   Compiling^[[0m parking_lot v0.12.5
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:57.1582264Z ^[[1m^[[92m   Compiling^[[0m tinystr v0.8.5
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:57.3471225Z ^[[1m^[[92m   Compiling^[[0m polycool v0.4.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:57.6160813Z ^[[1m^[[92m   Compiling^[[0m num_cpus v1.17.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:57.8463811Z ^[[1m^[[92m   Compiling^[[0m ndk-context v0.1.1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:58.1271300Z ^[[1m^[[92m   Compiling^[[0m utf_types v1.0.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:58.1932256Z ^[[1m^[[92m   Compiling^[[0m litemap v0.8.3
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:58.3735856Z ^[[1m^[[92m   Compiling^[[0m profiling v1.0.18
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:58.3792175Z ^[[1m^[[92m   Compiling^[[0m writeable v0.6.4
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:58.4502133Z ^[[1m^[[92m   Compiling^[[0m utf8_iter v1.1.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:58.6131149Z ^[[1m^[[92m   Compiling^[[0m naga-types v30.0.1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:58.6443965Z ^[[1m^[[92m   Compiling^[[0m icu_locale_core v2.4.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:36:58.7832266Z ^[[1m^[[92m   Compiling^[[0m kurbo v0.13.1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:00.7584998Z ^[[1m^[[92m   Compiling^[[0m ndk v0.9.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:00.9450972Z ^[[1m^[[92m   Compiling^[[0m miniz_oxide v0.9.1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:01.8371906Z ^[[1m^[[92m   Compiling^[[0m ffmpeg-sys-next v7.1.3 (/home/runner/work/Artcraft-android32/Artcraft-android32/source/picassosuite/vendor/ffmpeg-sys-next)
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:02.5361105Z ^[[1m^[[92m   Compiling^[[0m zerotrie v0.2.5
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:02.6271169Z ^[[1m^[[92m   Compiling^[[0m potential_utf v0.1.6
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:02.9422024Z ^[[1m^[[92m   Compiling^[[0m picasso-color v0.8.0 (/home/runner/work/Artcraft-android32/Artcraft-android32/source/picassosuite/crates/picasso-color)
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:03.0294244Z ^[[1m^[[92m   Compiling^[[0m naga v30.0.1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:03.0734739Z ^[[1m^[[92m   Compiling^[[0m color v0.3.3
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:03.1221345Z ^[[1m^[[92m   Compiling^[[0m font-types v0.12.6
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:03.1734593Z ^[[1m^[[92m   Compiling^[[0m euclid v0.22.14
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:03.6144223Z ^[[1m^[[92m   Compiling^[[0m ash v0.38.0+1.3.281
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:03.7531610Z ^[[1m^[[92m   Compiling^[[0m icu_properties_data v2.4.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:03.8907596Z ^[[1m^[[92m   Compiling^[[0m linebender_resource_handle v0.1.1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:03.9351295Z ^[[1m^[[92m   Compiling^[[0m bit-vec v0.9.1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:03.9460010Z ^[[1m^[[92m   Compiling^[[0m unicode-width v0.2.2
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:03.9942091Z ^[[1m^[[92m   Compiling^[[0m icu_normalizer_data v2.4.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:04.0851202Z ^[[1m^[[92m   Compiling^[[0m peniko v0.6.1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:04.2083918Z ^[[1m^[[92m   Compiling^[[0m bit-set v0.10.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:04.2801304Z ^[[1m^[[92m   Compiling^[[0m codespan-reporting v0.13.1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:04.3851130Z ^[[1m^[[92m   Compiling^[[0m guillotiere v0.7.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:04.4393888Z ^[[1m^[[92m   Compiling^[[0m read-fonts v0.41.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:04.9611286Z ^[[1m^[[92m   Compiling^[[0m icu_collections v2.4.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:05.0692602Z ^[[1m^[[92m   Compiling^[[0m flate2 v1.1.10
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:05.9041225Z ^[[1m^[[92m   Compiling^[[0m icu_provider v2.4.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:06.3602372Z ^[[1m^[[92m   Compiling^[[0m wayland-sys v0.31.11
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:06.3742194Z ^[[1m^[[92m   Compiling^[[0m aho-corasick v1.1.5
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:06.4296400Z ^[[1m^[[92m   Compiling^[[0m ahash v0.8.12
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:06.4901562Z ^[[1m^[[92m   Compiling^[[0m generic-array v0.14.7
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:06.5528461Z ^[[1m^[[92m   Compiling^[[0m spirv v0.4.0+sdk-1.4.341.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:08.1442900Z ^[[1m^[[92m   Compiling^[[0m static_assertions v1.1.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:08.2008421Z ^[[1m^[[92m   Compiling^[[0m fearless_simd v0.4.1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:11.0251127Z ^[[1m^[[92m   Compiling^[[0m khronos-egl v6.0.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:11.1427120Z ^[[1m^[[92m   Compiling^[[0m uuid v1.28.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:11.4512145Z ^[[1m^[[92m   Compiling^[[0m typed-path v0.12.3
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:11.6731388Z ^[[1m^[[92m   Compiling^[[0m unicode-general-category v1.1.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:13.7897624Z ^[[1m^[[92m   Compiling^[[0m vello_common v0.1.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:17.4151204Z ^[[1m^[[92m   Compiling^[[0m wgpu-types v30.0.1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:22.9098525Z ^[[1m^[[92m   Compiling^[[0m dlib v0.5.3
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:22.9991929Z ^[[1m^[[92m   Compiling^[[0m gemm-f32 v0.19.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:23.4714405Z ^[[1m^[[92m   Compiling^[[0m wgpu-hal v30.0.1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:23.6491343Z ^[[1m^[[92m   Compiling^[[0m emath v0.36.2
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:24.0742157Z ^[[1m^[[92m   Compiling^[[0m quick-xml v0.41.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:25.6192083Z ^[[1m^[[92m   Compiling^[[0m typenum v1.20.1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:26.4533871Z ^[[1m^[[92m   Compiling^[[0m presser v0.3.1
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:26.5597796Z ^[[1m^[[92m   Compiling^[[0m ffmpeg-next v7.1.0
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1118893Z ^[[1m^[[91merror^[[0m: failed to run custom build command for `ffmpeg-sys-next v7.1.3 (/home/runner/work/Artcraft-android32/Artcraft-android32/source/picassosuite/vendor/ffmpeg-sys-next)`
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1137681Z 
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1155234Z Caused by:
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1169544Z   process didn't exit successfully: `/home/runner/work/Artcraft-android32/Artcraft-android32/build/picassosuite/target/release/build/ffmpeg-sys-next/39dd851c4673b802/out/build_script_build` (exit status: 101)
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1171185Z   --- stdout
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1172528Z   cargo:rustc-link-search=native=/home/runner/work/Artcraft-android32/Artcraft-android32/build/picassosuite/target/armv7-linux-androideabi/release/build/ffmpeg-sys-next/7fdce8797f5fd2ae/out/dist/lib
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1173664Z   cargo:rustc-link-lib=static=avcodec
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1174156Z   cargo:rustc-link-lib=static=avformat
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1174668Z   cargo:rustc-link-lib=static=avutil
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1175156Z   cargo:rustc-link-lib=static=swresample
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1175626Z   cargo:rustc-link-lib=static=swscale
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1176136Z   cargo:rustc-link-arg=-Wl,--no-as-needed
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1176825Z   cargo:rustc-link-lib=z
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1177332Z   cargo:rerun-if-env-changed=CC_armv7-linux-androideabi
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1178192Z   CC_armv7-linux-androideabi = Some(/usr/local/lib/android/sdk/ndk/27.3.13750724/toolchains/llvm/prebuilt/linux-x86_64/bin/clang)
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1179028Z   cargo:rerun-if-env-changed=CC_ENABLE_DEBUG_OUTPUT
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1179602Z   cargo:rerun-if-env-changed=CRATE_CC_NO_DEFAULTS
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1180335Z   CRATE_CC_NO_DEFAULTS = None
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1180786Z   cargo:rerun-if-env-changed=CFLAGS
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1181229Z   CFLAGS = None
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1181655Z   cargo:rerun-if-env-changed=TARGET_CFLAGS
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1182153Z   TARGET_CFLAGS = None
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1182665Z   cargo:rerun-if-env-changed=CFLAGS_armv7_linux_androideabi
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1183203Z   CFLAGS_armv7_linux_androideabi = None
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1183717Z   cargo:rerun-if-env-changed=CFLAGS_armv7-linux-androideabi
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1184420Z   CFLAGS_armv7-linux-androideabi = Some(--target=armv7a-linux-androideabi28)
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1185119Z   cargo:rerun-if-env-changed=CC_SHELL_ESCAPED_FLAGS
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1185643Z   CC_SHELL_ESCAPED_FLAGS = None
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1186204Z   configure stdout: libvpx enabled but no supported decoders found
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1186635Z 
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1187030Z   If you think configure made a mistake, make sure you are using the latest
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1187718Z   version from Git.  If the latest version fails, report the problem to the
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1188391Z   ffmpeg-user@ffmpeg.org mailing list or IRC #ffmpeg on irc.libera.chat.
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1189131Z   Include the log file "ffbuild/config.log" produced by configure as this will help
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1191288Z   solve the problem.
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1206110Z 
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1206428Z   configure stderr: 
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1206751Z 
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1206983Z   --- stderr
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1207382Z   Cloning into 'ffmpeg-7.1'...
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1207788Z 
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1208170Z   thread 'main' (13530) panicked at vendor/ffmpeg-sys-next/build.rs:960:39:
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1208982Z   called `Result::unwrap()` on an `Err` value: Custom { kind: Other, error: "configure failed " }
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1209991Z   note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:27.1210952Z ^[[1m^[[33mwarning^[[0m: build failed, waiting for other jobs to finish...
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:34.2180032Z note: If the build failed due to a missing target, you can run this command:
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:34.2180572Z note: 
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:34.2180931Z note:     rustup target install armv7-linux-androideabi
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:34.2186572Z 
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:34.2187166Z ERROR: Release native build failed (exit 101). Log: /home/runner/work/Artcraft-android32/Artcraft-android32/logs/picassosuite-release-20261117-233626.log
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:34.2187788Z No source checkout or existing project files were deleted.
+Build picassosuite	Build picassosuite APK	2026-11-17T23:37:34.2201909Z ##[error]Process completed with exit code 1.
