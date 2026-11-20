@@ -2,9 +2,9 @@
   "schema": 1,
   "repo": "storytold/figcraft",
   "branch": "main",
-  "head": "a80ca002a4e52d62a24eaccb40fbdfeea4a1cc96",
-  "head_date": "2026-11-19T00:22:50Z",
-  "commits": 4658,
+  "head": "c745cc615df7a311f5317724ecac328940e73c27",
+  "head_date": "2026-11-20T00:44:17Z",
+  "commits": 4665,
   "unattributed_commits": 18,
   "contributors": [
     {
@@ -37,14 +37,14 @@
       "login": "dylanmtaylor",
       "people_entry": true,
       "github_name": "Dylan M. Taylor",
-      "prs": 125,
-      "commits": 223,
-      "lines_added": 19777,
-      "lines_deleted": 14746,
+      "prs": 128,
+      "commits": 227,
+      "lines_added": 20491,
+      "lines_deleted": 15169,
       "binary_added": 0,
       "binary_deleted": 0,
       "first_commit": "2026-10-15T23:53:22Z",
-      "last_commit": "2026-11-19T00:10:44Z"
+      "last_commit": "2026-11-20T00:44:17Z"
     },
     {
       "login": "Silvertree2010",
@@ -99,6 +99,19 @@
       "last_commit": "2026-11-18T20:22:39Z"
     },
     {
+      "login": "FredApps",
+      "people_entry": false,
+      "github_name": null,
+      "prs": 10,
+      "commits": 43,
+      "lines_added": 3003,
+      "lines_deleted": 581,
+      "binary_added": 0,
+      "binary_deleted": 0,
+      "first_commit": "2026-11-05T13:26:53Z",
+      "last_commit": "2026-11-20T00:04:42Z"
+    },
+    {
       "login": "Carbocode",
       "people_entry": true,
       "github_name": "Prisco",
@@ -110,19 +123,6 @@
       "binary_deleted": 0,
       "first_commit": "2026-10-29T10:20:01Z",
       "last_commit": "2026-11-17T18:13:25Z"
-    },
-    {
-      "login": "FredApps",
-      "people_entry": false,
-      "github_name": null,
-      "prs": 8,
-      "commits": 41,
-      "lines_added": 2854,
-      "lines_deleted": 411,
-      "binary_added": 0,
-      "binary_deleted": 0,
-      "first_commit": "2026-11-05T13:26:53Z",
-      "last_commit": "2026-11-18T12:10:30Z"
     },
     {
       "login": "sarsonj",
@@ -1956,6 +1956,19 @@
       "binary_deleted": 0,
       "first_commit": "2026-10-15T12:11:40Z",
       "last_commit": "2026-10-15T12:11:40Z"
+    },
+    {
+      "login": "Terra854",
+      "people_entry": false,
+      "github_name": null,
+      "prs": 1,
+      "commits": 1,
+      "lines_added": 59,
+      "lines_deleted": 2,
+      "binary_added": 0,
+      "binary_deleted": 0,
+      "first_commit": "2026-11-19T22:53:33Z",
+      "last_commit": "2026-11-19T22:53:33Z"
     },
     {
       "login": "th0mate",
